@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'oplis',
+    loadChildren: () => import('./pages/oplis/oplis.module').then( m => m.OPLISPageModule)
+  },
 ];
 
 @NgModule({
