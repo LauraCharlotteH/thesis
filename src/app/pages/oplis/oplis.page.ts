@@ -4,6 +4,11 @@ interface Question{
   question: string;
   answer: { option: string; correct: boolean } [];
 }
+enum Cluster {
+  low = 'LOW',
+  med = 'MED',
+  high = 'HIGH'
+}
 
 @Component({
   selector: 'app-oplis',
@@ -12,7 +17,14 @@ interface Question{
 })
 
 export class OPLISPage implements OnInit {
-
+  currentQuestion: number;
+  answerSelected = false;
+  correctAnswers = 0;
+  incorrectAnswers = 0;
+  oplisValue = null;
+  percentageRank = null;
+  cluster: Cluster = null;
+  prevAnswered = [];
 
   questions: Question[] = [
     {
@@ -44,7 +56,7 @@ export class OPLISPage implements OnInit {
     },
     {
       question: 'Durch die Nutzung von falschen Namen oder Pseudonymen kann die Identifikation der eigenen Person\n' +
-        'im Internet im Internet zumindest erschwert werden.',
+        'im Internet zumindest erschwert werden.',
       answer: [
         {option: 'wahr', correct: true},
         {option: 'falsch', correct: false},
@@ -210,7 +222,182 @@ export class OPLISPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.currentQuestion = this.getRandom();
+
+    this.prevAnswered.push(this.currentQuestion);
+  }
+
+  onAnswer(option: boolean){
+    console.log('for Question: ' + this.currentQuestion + ' the answer is: ' + option);
+    this.answerSelected = true;
+    setTimeout(() => {
+      //get new question at random, ensure it has not been answered before
+      let newQuiz = this.getRandom();
+      while(this.prevAnswered.includes(newQuiz) && this.prevAnswered.length < 20){
+        newQuiz = this.getRandom();
+      }
+      this.currentQuestion = newQuiz;
+      this.prevAnswered.push(this.currentQuestion);
+      //check oplis group etc
+      this.evaluateOPLIS();
+
+      this.answerSelected = false;
+    }, 300);
+
+    if(option){
+      this.correctAnswers++;
+    }else{
+      this.incorrectAnswers++;
+    }
+
+  }
+
+  getRandom(){
+    return Math.floor(Math.random() * this.questions.length);
+  }
+
+  evaluateOPLIS(){
+    switch (this.correctAnswers) {
+      case 0:
+        this.oplisValue = 61;
+        this.percentageRank = 2;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 1:
+        this.oplisValue = 65;
+        this.percentageRank = 3;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 2:
+        this.oplisValue = 68;
+        this.percentageRank = 4;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 3:
+        this.oplisValue = 71;
+        this.percentageRank = 4;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 4:
+        this.oplisValue = 74;
+        this.percentageRank = 9;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 5:
+        this.oplisValue = 78;
+        this.percentageRank = 11;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 6:
+        this.oplisValue = 81;
+        this.percentageRank = 15 ;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 7:
+        this.oplisValue = 84;
+        this.percentageRank = 18;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 8:
+        this.oplisValue = 88;
+        this.percentageRank = 22;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 9:
+        this.oplisValue = 91;
+        this.percentageRank = 27;
+        this.cluster = Cluster.low;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 10:
+        this.oplisValue = 94;
+        this.percentageRank = 34;
+        this.cluster = Cluster.med;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 11:
+        this.oplisValue = 97;
+        this.percentageRank = 42;
+        this.cluster = Cluster.med;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 12:
+        this.oplisValue = 101;
+        this.percentageRank = 50;
+        this.cluster = Cluster.med;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 13:
+        this.oplisValue = 104;
+        this.percentageRank = 58;
+        this.cluster = Cluster.med;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 14:
+        this.oplisValue = 107;
+        this.percentageRank = 67;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 15:
+        this.oplisValue = 110;
+        this.percentageRank = 77;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 16:
+        this.oplisValue = 114;
+        this.percentageRank = 84;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 17:
+        this.oplisValue = 117;
+        this.percentageRank = 91;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 18:
+        this.oplisValue = 120;
+        this.percentageRank = 96;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 19:
+        this.oplisValue = 123;
+        this.percentageRank = 99;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      case 20:
+        this.oplisValue = 127;
+        this.percentageRank = 100;
+        this.cluster = Cluster.high;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank + ' cluster:' + this.cluster);
+        break;
+      default:
+        this.oplisValue = 0;
+        this.percentageRank = 0;
+        console.log('eval: OV-' + this.oplisValue + ', PR-' +this.percentageRank);
+        break;
+    }
+  }
+
+  playAgain(){
+    this.prevAnswered = [];
+    this.prevAnswered.push(this.getRandom());
+    this.correctAnswers = 0;
+    this.incorrectAnswers = 0;
   }
 
 }
