@@ -26,9 +26,9 @@
       <button class="btn" (click)="playAgain()" >Fragebogen wiederholen</button>
       <div class="results-wrapper">
         <p>Richtige Antworten: {{ correctAnswers }} | Falsche Antworten: {{ incorrectAnswers }}</p>
-        <p>OPLIS Wert: {{oplisValue}}</p>
-        <p>Prozentrang: {{percentageRank}}</p>
-        <h4>Cluster: {{cluster}}</h4>
+        <p>OPLIS Wert: {{result.oplisScore}}</p>
+        <p>Prozentrang: {{result.percentageRank}}</p>
+        <h4>Cluster: {{result.cluster}}</h4>
       </div>
 
     </div>
