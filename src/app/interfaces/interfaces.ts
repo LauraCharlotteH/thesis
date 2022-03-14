@@ -16,6 +16,12 @@ export interface IOplisResult{
   cluster: Cluster;
 }
 
+export interface ICookieScore{
+  website: string;
+  noOfCookies: number;
+  acceptedCookies: number;
+}
+
 export enum Cluster {
   low = 'LOW',
   med = 'MED',

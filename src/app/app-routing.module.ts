@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'oplis',
     loadChildren: () => import('./pages/oplis/oplis.module').then( m => m.OPLISPageModule)
   },
+  {
+    path: 'before-cookies',
+    loadChildren: () => import('./pages/before-cookies/before-cookies.module').then( m => m.BeforeCookiesPageModule)
+  },
 ];
 
 @NgModule({

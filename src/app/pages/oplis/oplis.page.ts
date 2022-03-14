@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IQuestionnaire, IOplisResult, Cluster} from '../../interfaces/interfaces';
 import {OplisQuestionnaireService} from '../../services/oplis-questionnaire.service';
+import {ScoreCardService} from '../../services/score-card/score-card.service';
 
 @Component({
   selector: 'app-oplis',
@@ -18,7 +19,7 @@ export class OPLISPage implements OnInit {
   result: IOplisResult;
 
 
-  constructor(private questionnaireService: OplisQuestionnaireService) { }
+  constructor(public scoreCardService: ScoreCardService, private questionnaireService: OplisQuestionnaireService) { }
 
   ngOnInit(): void {
     this.questions = this.questionnaireService.getQuestionnaire();
@@ -39,6 +40,7 @@ export class OPLISPage implements OnInit {
       this.prevAnswered.push(this.currentQuestion);
       //check results
       this.result = this.questionnaireService.evaluate(this.correctAnswers);
+      this.scoreCardService.setResult(this.result);
 
       this.answerSelected = false;
     }, 300);
