@@ -6,7 +6,7 @@ import {Cluster, ICookieScore, IOplisResult} from '../../interfaces/interfaces';
 })
 export class ScoreCardService {
   result: IOplisResult;
-  cookies: ICookieScore[];
+  cookies: ICookieScore[] = new Array();
   cluster: Cluster;
 
   constructor() { }
@@ -21,14 +21,18 @@ export class ScoreCardService {
   }
 
   setCookies(cookies: ICookieScore){
+    let alreadyExists = false;
     //check if exists already, and update score accordingly
     this.cookies.forEach( (cookieScore) => {
       if (cookieScore.website === cookies.website){
         cookieScore = cookies;
+        alreadyExists = true;
       }
     });
     //add to list if it does not exist yet
-    this.cookies.push(cookies);
+    if(!alreadyExists){this.cookies.push(cookies);}
+    //TODO remove:
+    console.log(this.cookies);
   }
 
   getCookies(page: string){

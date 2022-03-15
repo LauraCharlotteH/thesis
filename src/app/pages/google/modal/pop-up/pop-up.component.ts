@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ICookieScore} from "../../../../interfaces/interfaces";
+import {ScoreCardService} from "../../../../services/score-card/score-card.service";
 
 @Component({
   selector: 'app-pop-up',
@@ -7,8 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(public scoreCardService: ScoreCardService) { }
 
   ngOnInit() {}
+
+  //TODO find out how many cookies and set accoridingly!
+  acceptAll(){
+    const cookies: ICookieScore = {
+      website: 'google.de',
+      noOfCookies: 100,
+      acceptedCookies: 100
+    };
+    this.scoreCardService.setCookies(cookies);
+  }
 
 }
