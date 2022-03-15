@@ -34,9 +34,17 @@ ion-header {
   height: calc(10vh);
   margin-bottom: 5px;
   transparency: 50%;
-
-
 }
+
+
+.google-modal{
+  --width: 800px;
+  --height: 800px;
+  --border-radius: 1em;
+}
+
+
+
 
 :root {
   --ion-text-color: #687864;

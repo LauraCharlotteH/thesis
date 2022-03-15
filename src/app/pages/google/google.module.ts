@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { GooglePageRoutingModule } from './google-routing.module';
 
 import { GooglePage } from './google.page';
+import {PopUpComponent} from './modal/pop-up/pop-up.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { GooglePage } from './google.page';
     IonicModule,
     GooglePageRoutingModule
   ],
-  declarations: [GooglePage]
+  declarations: [
+    GooglePage,
+    PopUpComponent
+  ]
 })
 export class GooglePageModule {}

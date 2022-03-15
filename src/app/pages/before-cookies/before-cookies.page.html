@@ -1,11 +1,13 @@
 <ion-header></ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
-  Cluster is: {{cluster}}
+  <div id="container">
+    <strong>Cluster is: {{cluster}}</strong>
+    <p>Some information on how the next steps are done...</p>
 
-  <p>Some information on how the next steps are done...</p>
+    <p>TODO Buttons depending on cluster (with or without walk trough tutorial...)</p>
+    <ion-button [routerLink]="['/google']">Start setting cookies!</ion-button>
+  </div>
 
-  <p>TODO Buttons depending on cluster (with or without walk trough tutorial...)</p>
-  <ion-button [routerLink]="['/google']">Start setting cookies!</ion-button>
 </ion-content>
