@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'before-cookies',
     loadChildren: () => import('./pages/before-cookies/before-cookies.module').then( m => m.BeforeCookiesPageModule)
   },
+  {
+    path: 'google',
+    loadChildren: () => import('./pages/google/google.module').then( m => m.GooglePageModule)
+  },
 ];
 
 @NgModule({
