@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 export class AdjustSettingsComponent implements OnInit {
   selectedCookies: {[key: string]: ActiveStatus} = {
     suchanpassung: ActiveStatus.neutral,
-    voutubeverlauf: ActiveStatus.neutral,
+    youtubeverlauf: ActiveStatus.neutral,
     personalisierteWerbung : ActiveStatus.neutral,
     pWSuche : ActiveStatus.neutral,
     pWWeb: ActiveStatus.neutral,
@@ -30,6 +30,14 @@ export class AdjustSettingsComponent implements OnInit {
 
   suchanpassungAus(){
     this.selectedCookies.suchanpassung = ActiveStatus.notact;
+  }
+
+  youtubeVerlaufAn(){
+    this.selectedCookies.youtubeverlauf = ActiveStatus.act;
+  }
+
+  youtubeVerlaufAus(){
+    this.selectedCookies.youtubeverlauf = ActiveStatus.notact;
   }
 
 }

@@ -34,5 +34,31 @@
 
     </div>
   </div>
+
+  <div class="box">
+    <h2>YouTube-Verlauf </h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p>
+            Sie erhalten z. B. personalisierte Videoempfehlungen und eine angepasste Startseite. Für diese Einstellung werden Ihre Aktivitäten bei YouTube herangezogen, etwa die Videos, die Sie sich ansehen oder nach denen Sie suchen.
+          </p>
+        </ion-col>
+        <ion-col>
+          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NEUTRAL')" src="assets/google/youtube-neutral.svg">
+          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" src="assets/google/youtube-active.svg">
+          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" src="assets/google/youtube-off.svg">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div align="right">
+      <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'NOTACTIVE')" fill="clear" (click)="youtubeVerlaufAus()">Aus</ion-button>
+      <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" (click)="youtubeVerlaufAus()">Aus</ion-button>
+      <!--for styling purposes one button "active" and one "not active"-->
+      <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'ACTIVE')" fill="clear" (click)="youtubeVerlaufAn()">An</ion-button>
+      <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" (click)="youtubeVerlaufAn()">An</ion-button>
+
+    </div>
+  </div>
 </div>
 
