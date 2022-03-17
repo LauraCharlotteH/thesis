@@ -16,7 +16,7 @@ export class AdjustSettingsComponent implements OnInit {
     personalisierteWerbung : ActiveStatus.neutral,
     pWSuche : ActiveStatus.neutral,
     pWWeb: ActiveStatus.neutral,
-  }
+  };
 
 
   constructor() { }

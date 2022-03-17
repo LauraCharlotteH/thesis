@@ -30,3 +30,13 @@ ion-button {
   border: thin solid lightgray;
   border-radius: 5px;
 }
+
+.active-button {
+  --box-shadow: none;
+  --padding-left: 80px;
+  text-transform: none;
+  color: #1d53a9;
+  --background: #e8f0fe;
+  border: thin solid lightgray;
+  border-radius: 5px;
+}
