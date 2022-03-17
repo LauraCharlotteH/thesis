@@ -19,13 +19,15 @@
           </p>
         </ion-col>
         <ion-col>
-          <img src="assets/google/suchverlauf-neutral.svg">
+          <img [hidden] = "!(selectedCookies.suchanpassung === 'NEUTRAL')" src="assets/google/suchverlauf-neutral.svg">
+          <img [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" src="assets/google/suchverlauf-active.svg">
+          <img [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" src="assets/google/suchverlauf-off.svg">
         </ion-col>
       </ion-row>
     </ion-grid>
     <div align="right">
-      <ion-button fill="clear">Aus</ion-button>
-      <ion-button fill="clear">An</ion-button>
+      <ion-button fill="clear" (click)="suchanpassungAus()">Aus</ion-button>
+      <ion-button fill="clear" (click)="suchanpassungAn()">An</ion-button>
     </div>
   </div>
 </div>

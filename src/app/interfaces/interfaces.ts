@@ -1,6 +1,8 @@
 /**
  * This is the interface all questionnaires should use
  */
+import {offsetSegment} from "@angular/compiler-cli/src/ngtsc/sourcemaps/src/segment_marker";
+
 export interface IQuestionnaire{
   question: string;
   answer: { option: string; correct: boolean } [];
@@ -26,4 +28,10 @@ export enum Cluster {
   low = 'LOW',
   med = 'MED',
   high = 'HIGH'
+}
+
+export enum ActiveStatus {
+  act = 'ACTIVE',
+  notact= 'NOTACTIVE',
+  neutral = 'NEUTRAL'
 }
