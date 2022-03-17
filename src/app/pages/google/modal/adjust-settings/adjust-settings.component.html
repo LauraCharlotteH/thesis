@@ -1,64 +1,93 @@
-<div id="wrapper">
-  <div class="center">
-    <img src="assets/google/googlelogo.svg">
-    <h2>Personalisierungseinstellungen und Cookies</h2>
-    <p>Wir verwenden Cookies, um Personalisierungseinstellungen zur Verfügung zu stellen. Über diese können Sie
-      festlegen, wie Sie die Dienste von Google nutzen möchten – auch wenn Sie abgemeldet sind. Sie können Ihre
-      Einstellungen jederzeit unter g.co/privacytools ändern. Wenn Sie wissen möchten, wie Google Informationen
-      verwendet, die während Ihrer Nutzung von Google-Diensten generiert werden, dann lesen Sie unsere
-      Datenschutzerklärung.</p>
-  </div>
-  <div class="box">
-    <h2>Suchanpassung</h2>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <p>
-            Sie erhalten relevante Ergebnisse und Empfehlungen auf der Grundlage ihrer Google-Suchanfragen über diesen
-            Browser.
-          </p>
-        </ion-col>
-        <ion-col>
-          <img [hidden] = "!(selectedCookies.suchanpassung === 'NEUTRAL')" src="assets/google/suchverlauf-neutral.svg">
-          <img [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" src="assets/google/suchverlauf-active.svg">
-          <img [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" src="assets/google/suchverlauf-off.svg">
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <div align="right">
-      <ion-button [hidden] = "(selectedCookies.suchanpassung === 'NOTACTIVE')" fill="clear" (click)="suchanpassungAus()">Aus</ion-button>
-      <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" (click)="suchanpassungAus()">Aus</ion-button>
-      <!--for styling purposes one button "active" and one "not active"-->
-      <ion-button [hidden] = "(selectedCookies.suchanpassung === 'ACTIVE')" fill="clear" (click)="suchanpassungAn()">An</ion-button>
-      <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" (click)="suchanpassungAn()">An</ion-button>
+<ion-content>
+  <div id="wrapper">
+    <div class="center">
+      <img src="assets/google/googlelogo.svg">
+      <h2>Personalisierungseinstellungen und Cookies</h2>
+      <p>Wir verwenden Cookies, um Personalisierungseinstellungen zur Verfügung zu stellen. Über diese können Sie
+        festlegen, wie Sie die Dienste von Google nutzen möchten – auch wenn Sie abgemeldet sind. Sie können Ihre
+        Einstellungen jederzeit unter g.co/privacytools ändern. Wenn Sie wissen möchten, wie Google Informationen
+        verwendet, die während Ihrer Nutzung von Google-Diensten generiert werden, dann lesen Sie unsere
+        Datenschutzerklärung.</p>
+    </div>
+    <div class="box">
+      <h2>Suchanpassung</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>
+              Sie erhalten relevante Ergebnisse und Empfehlungen auf der Grundlage ihrer Google-Suchanfragen über diesen
+              Browser.
+            </p>
+          </ion-col>
+          <ion-col>
+            <img [hidden] = "!(selectedCookies.suchanpassung === 'NEUTRAL')" src="assets/google/suchverlauf-neutral.svg">
+            <img [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" src="assets/google/suchverlauf-active.svg">
+            <img [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" src="assets/google/suchverlauf-off.svg">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div align="right">
+        <ion-button [hidden] = "(selectedCookies.suchanpassung === 'NOTACTIVE')" fill="clear" (click)="suchanpassungAus()">Aus</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" (click)="suchanpassungAus()">Aus</ion-button>
+        <!--for styling purposes one button "active" and one "not active"-->
+        <ion-button [hidden] = "(selectedCookies.suchanpassung === 'ACTIVE')" fill="clear" (click)="suchanpassungAn()">An</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" (click)="suchanpassungAn()">An</ion-button>
 
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>YouTube-Verlauf </h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>
+              Sie erhalten z. B. personalisierte Videoempfehlungen und eine angepasste Startseite. Für diese Einstellung werden Ihre Aktivitäten bei YouTube herangezogen, etwa die Videos, die Sie sich ansehen oder nach denen Sie suchen.
+            </p>
+          </ion-col>
+          <ion-col>
+            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NEUTRAL')" src="assets/google/youtube-neutral.svg">
+            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" src="assets/google/youtube-active.svg">
+            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" src="assets/google/youtube-off.svg">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div align="right">
+        <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'NOTACTIVE')" fill="clear" (click)="youtubeVerlaufAus()">Aus</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" (click)="youtubeVerlaufAus()">Aus</ion-button>
+        <!--for styling purposes one button "active" and one "not active"-->
+        <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'ACTIVE')" fill="clear" (click)="youtubeVerlaufAn()">An</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" (click)="youtubeVerlaufAn()">An</ion-button>
+
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Personalisierte Werbung </h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>
+              Sie können sich von Google in der Suche, bei YouTube und im gesamten Web personalisierte Werbung anzeigen lassen, die auf Ihren Aktivitäten beruht. Zu diesen Aktivitäten gehören z. B. Ihre Suchanfragen bei Google und die Videos, die Sie sich bei YouTube ansehen.
+            </p>
+          </ion-col>
+          <ion-col>
+            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'NEUTRAL')" src="assets/google/adds-neutral.svg">
+            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'ACTIVE')" src="assets/google/adds-active.svg">
+            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" src="assets/google/adds-off.svg">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div align="right">
+        <ion-button [hidden] = "(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" fill="clear" (click)="addsAus()">Aus</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" (click)="addsAus()">Aus</ion-button>
+        <!--for styling purposes one button "active" and one "not active"-->
+        <ion-button [hidden] = "(selectedCookies.personalisierteWerbung === 'ACTIVE')" fill="clear" (click)="addsAn()">An</ion-button>
+        <ion-button class="active-button" [hidden] = "!(selectedCookies.personalisierteWerbung === 'ACTIVE')" (click)="addsAn()">An</ion-button>
+
+      </div>
     </div>
   </div>
+</ion-content>
 
-  <div class="box">
-    <h2>YouTube-Verlauf </h2>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <p>
-            Sie erhalten z. B. personalisierte Videoempfehlungen und eine angepasste Startseite. Für diese Einstellung werden Ihre Aktivitäten bei YouTube herangezogen, etwa die Videos, die Sie sich ansehen oder nach denen Sie suchen.
-          </p>
-        </ion-col>
-        <ion-col>
-          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NEUTRAL')" src="assets/google/youtube-neutral.svg">
-          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" src="assets/google/youtube-active.svg">
-          <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" src="assets/google/youtube-off.svg">
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <div align="right">
-      <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'NOTACTIVE')" fill="clear" (click)="youtubeVerlaufAus()">Aus</ion-button>
-      <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" (click)="youtubeVerlaufAus()">Aus</ion-button>
-      <!--for styling purposes one button "active" and one "not active"-->
-      <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'ACTIVE')" fill="clear" (click)="youtubeVerlaufAn()">An</ion-button>
-      <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" (click)="youtubeVerlaufAn()">An</ion-button>
-
-    </div>
-  </div>
-</div>
 

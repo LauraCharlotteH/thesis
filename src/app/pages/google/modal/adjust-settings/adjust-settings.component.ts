@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActiveStatus} from '../../../../interfaces/interfaces';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 @Component({
@@ -17,7 +15,6 @@ export class AdjustSettingsComponent implements OnInit {
     pWSuche : ActiveStatus.neutral,
     pWWeb: ActiveStatus.neutral,
   };
-
 
   constructor() { }
 
@@ -38,6 +35,14 @@ export class AdjustSettingsComponent implements OnInit {
 
   youtubeVerlaufAus(){
     this.selectedCookies.youtubeverlauf = ActiveStatus.notact;
+  }
+
+  addsAn(){
+    this.selectedCookies.personalisierteWerbung = ActiveStatus.act;
+  }
+
+  addsAus(){
+    this.selectedCookies.personalisierteWerbung = ActiveStatus.notact;
   }
 
 }
