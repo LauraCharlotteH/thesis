@@ -9,6 +9,7 @@ export class AdjustSettingsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

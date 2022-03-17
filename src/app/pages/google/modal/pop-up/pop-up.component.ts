@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ICookieScore} from "../../../../interfaces/interfaces";
-import {ScoreCardService} from "../../../../services/score-card/score-card.service";
+import {ICookieScore} from '../../../../interfaces/interfaces';
+import {ScoreCardService} from '../../../../services/score-card/score-card.service';
+import {ModalController} from '@ionic/angular';
+import {AdjustSettingsComponent} from '../adjust-settings/adjust-settings.component';
 
 @Component({
   selector: 'app-pop-up',
@@ -9,7 +11,7 @@ import {ScoreCardService} from "../../../../services/score-card/score-card.servi
 })
 export class PopUpComponent implements OnInit {
 
-  constructor(public scoreCardService: ScoreCardService) { }
+  constructor(public scoreCardService: ScoreCardService, protected modalCtrl: ModalController) { }
 
   ngOnInit() {}
 
@@ -21,6 +23,24 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 100
     };
     this.scoreCardService.setCookies(cookies);
+  }
+
+  async adjustSettings(){
+    const modal = await this.modalCtrl.create({
+      component: AdjustSettingsComponent,
+      backdropDismiss: false,
+      componentProps: {
+        name: 'cluster is XXX'
+      },
+      cssClass: 'google-adjust'
+    });
+
+    modal.onDidDismiss().then(async (data: any) => {
+      if (data.data) {
+        console.log('data is: ' + data.data);
+      }
+    });
+    return await modal.present();
   }
 
 }
