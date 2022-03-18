@@ -8,6 +8,8 @@ import { GooglePageRoutingModule } from './google-routing.module';
 
 import { GooglePage } from './google.page';
 import {PopUpComponent} from './modal/pop-up/pop-up.component';
+import {AdjustSettingsComponent} from './modal/adjust-settings/adjust-settings.component';
+import {DropDownComponent} from '../../components/drop-down/drop-down.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import {PopUpComponent} from './modal/pop-up/pop-up.component';
   ],
   declarations: [
     GooglePage,
-    PopUpComponent
+    PopUpComponent,
+    AdjustSettingsComponent,
+    DropDownComponent
   ]
 })
 export class GooglePageModule {}
