@@ -20,18 +20,26 @@
             </p>
           </ion-col>
           <ion-col>
-            <img [hidden] = "!(selectedCookies.suchanpassung === 'NEUTRAL')" src="assets/google/suchverlauf-neutral.svg">
-            <img [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" src="assets/google/suchverlauf-active.svg">
-            <img [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" src="assets/google/suchverlauf-off.svg">
+            <img [hidden]="!(selectedCookies.suchanpassung === 'NEUTRAL')" src="assets/google/suchverlauf-neutral.svg">
+            <img [hidden]="!(selectedCookies.suchanpassung === 'ACTIVE')" src="assets/google/suchverlauf-active.svg">
+            <img [hidden]="!(selectedCookies.suchanpassung === 'NOTACTIVE')" src="assets/google/suchverlauf-off.svg">
           </ion-col>
         </ion-row>
       </ion-grid>
       <div align="right">
-        <ion-button [hidden] = "(selectedCookies.suchanpassung === 'NOTACTIVE')" fill="clear" (click)="suchanpassungAus()">Aus</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'NOTACTIVE')" (click)="suchanpassungAus()">Aus</ion-button>
+        <ion-button [hidden]="(selectedCookies.suchanpassung === 'NOTACTIVE')" fill="clear"
+                    (click)="suchanpassungAus()">Aus
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.suchanpassung === 'NOTACTIVE')"
+                    (click)="suchanpassungAus()">Aus
+        </ion-button>
         <!--for styling purposes one button "active" and one "not active"-->
-        <ion-button [hidden] = "(selectedCookies.suchanpassung === 'ACTIVE')" fill="clear" (click)="suchanpassungAn()">An</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.suchanpassung === 'ACTIVE')" (click)="suchanpassungAn()">An</ion-button>
+        <ion-button [hidden]="(selectedCookies.suchanpassung === 'ACTIVE')" fill="clear" (click)="suchanpassungAn()">
+          An
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.suchanpassung === 'ACTIVE')"
+                    (click)="suchanpassungAn()">An
+        </ion-button>
 
       </div>
     </div>
@@ -42,22 +50,32 @@
         <ion-row>
           <ion-col>
             <p>
-              Sie erhalten z. B. personalisierte Videoempfehlungen und eine angepasste Startseite. Für diese Einstellung werden Ihre Aktivitäten bei YouTube herangezogen, etwa die Videos, die Sie sich ansehen oder nach denen Sie suchen.
+              Sie erhalten z. B. personalisierte Videoempfehlungen und eine angepasste Startseite. Für diese Einstellung
+              werden Ihre Aktivitäten bei YouTube herangezogen, etwa die Videos, die Sie sich ansehen oder nach denen
+              Sie suchen.
             </p>
           </ion-col>
           <ion-col>
-            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NEUTRAL')" src="assets/google/youtube-neutral.svg">
-            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" src="assets/google/youtube-active.svg">
-            <img [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" src="assets/google/youtube-off.svg">
+            <img [hidden]="!(selectedCookies.youtubeverlauf === 'NEUTRAL')" src="assets/google/youtube-neutral.svg">
+            <img [hidden]="!(selectedCookies.youtubeverlauf === 'ACTIVE')" src="assets/google/youtube-active.svg">
+            <img [hidden]="!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" src="assets/google/youtube-off.svg">
           </ion-col>
         </ion-row>
       </ion-grid>
       <div align="right">
-        <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'NOTACTIVE')" fill="clear" (click)="youtubeVerlaufAus()">Aus</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'NOTACTIVE')" (click)="youtubeVerlaufAus()">Aus</ion-button>
+        <ion-button [hidden]="(selectedCookies.youtubeverlauf === 'NOTACTIVE')" fill="clear"
+                    (click)="youtubeVerlaufAus()">Aus
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.youtubeverlauf === 'NOTACTIVE')"
+                    (click)="youtubeVerlaufAus()">Aus
+        </ion-button>
         <!--for styling purposes one button "active" and one "not active"-->
-        <ion-button [hidden] = "(selectedCookies.youtubeverlauf === 'ACTIVE')" fill="clear" (click)="youtubeVerlaufAn()">An</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.youtubeverlauf === 'ACTIVE')" (click)="youtubeVerlaufAn()">An</ion-button>
+        <ion-button [hidden]="(selectedCookies.youtubeverlauf === 'ACTIVE')" fill="clear" (click)="youtubeVerlaufAn()">
+          An
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.youtubeverlauf === 'ACTIVE')"
+                    (click)="youtubeVerlaufAn()">An
+        </ion-button>
 
       </div>
     </div>
@@ -68,53 +86,118 @@
         <ion-row>
           <ion-col>
             <p>
-              Sie können sich von Google in der Suche, bei YouTube und im gesamten Web personalisierte Werbung anzeigen lassen, die auf Ihren Aktivitäten beruht. Zu diesen Aktivitäten gehören z. B. Ihre Suchanfragen bei Google und die Videos, die Sie sich bei YouTube ansehen.
+              Sie können sich von Google in der Suche, bei YouTube und im gesamten Web personalisierte Werbung anzeigen
+              lassen, die auf Ihren Aktivitäten beruht. Zu diesen Aktivitäten gehören z. B. Ihre Suchanfragen bei Google
+              und die Videos, die Sie sich bei YouTube ansehen.
             </p>
           </ion-col>
           <ion-col>
-            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'NEUTRAL')" src="assets/google/adds-neutral.svg">
-            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'ACTIVE')" src="assets/google/adds-active.svg">
-            <img [hidden] = "!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" src="assets/google/adds-off.svg">
+            <img [hidden]="!(selectedCookies.personalisierteWerbung === 'NEUTRAL')"
+                 src="assets/google/adds-neutral.svg">
+            <img [hidden]="!(selectedCookies.personalisierteWerbung === 'ACTIVE')" src="assets/google/adds-active.svg">
+            <img [hidden]="!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" src="assets/google/adds-off.svg">
           </ion-col>
         </ion-row>
       </ion-grid>
       <div align="right">
-        <ion-button [hidden] = "(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" fill="clear" (click)="addsAus()">Aus</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" (click)="addsAus()">Aus</ion-button>
+        <ion-button [hidden]="(selectedCookies.personalisierteWerbung === 'NOTACTIVE')" fill="clear"
+                    (click)="addsAus()">Aus
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.personalisierteWerbung === 'NOTACTIVE')"
+                    (click)="addsAus()">Aus
+        </ion-button>
         <!--for styling purposes one button "active" and one "not active"-->
-        <ion-button [hidden] = "(selectedCookies.personalisierteWerbung === 'ACTIVE')" fill="clear" (click)="addsAn()">An</ion-button>
-        <ion-button class="active-button" [hidden] = "!(selectedCookies.personalisierteWerbung === 'ACTIVE')" (click)="addsAn()">An</ion-button>
+        <ion-button [hidden]="(selectedCookies.personalisierteWerbung === 'ACTIVE')" fill="clear" (click)="addsAn()">
+          An
+        </ion-button>
+        <ion-button class="active-button" [hidden]="!(selectedCookies.personalisierteWerbung === 'ACTIVE')"
+                    (click)="addsAn()">An
+        </ion-button>
 
       </div>
 
       <app-drop-down>
         <div class="drop-down">
-          <h3>Personalisierte Werbung in der Google Suche</h3>
+          <h2>Personalisierte Werbung in der Google Suche</h2>
           <p>In der Google Suche relevantere Werbung sehen</p>
           <div align="right">
-            <ion-button [hidden] = "(selectedCookies.pWSuche === 'NOTACTIVE')" fill="clear" (click)="pWSucheAus()">Aus</ion-button>
-            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWSuche === 'NOTACTIVE')" (click)="pWSucheAus()">Aus</ion-button>
+            <ion-button [hidden]="(selectedCookies.pWSuche === 'NOTACTIVE')" fill="clear" (click)="pWSucheAus()">Aus
+            </ion-button>
+            <ion-button class="active-button" [hidden]="!(selectedCookies.pWSuche === 'NOTACTIVE')"
+                        (click)="pWSucheAus()">Aus
+            </ion-button>
             <!--for styling purposes one button "active" and one "not active"-->
-            <ion-button [hidden] = "(selectedCookies.pWSuche === 'ACTIVE')" fill="clear" (click)="pWSucheAn()">An</ion-button>
-            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWSuche === 'ACTIVE')" (click)="pWSucheAn()">An</ion-button>
+            <ion-button [hidden]="(selectedCookies.pWSuche === 'ACTIVE')" fill="clear" (click)="pWSucheAn()">An
+            </ion-button>
+            <ion-button class="active-button" [hidden]="!(selectedCookies.pWSuche === 'ACTIVE')" (click)="pWSucheAn()">
+              An
+            </ion-button>
 
           </div>
         </div>
         <div class="drop-down">
-          <h3>Personalisierte Werbung auf YouTube & im ganzen Web</h3>
-          <p>Sie sehen relevantere Werbung auf YouTube und Websites im ganzen Web, die Google-Dienste zum Einblenden von Werbung nutzen</p>
+          <h2>Personalisierte Werbung auf YouTube & im ganzen Web</h2>
+          <p>Sie sehen relevantere Werbung auf YouTube und Websites im ganzen Web, die Google-Dienste zum Einblenden von
+            Werbung nutzen</p>
           <div align="right">
-            <ion-button [hidden] = "(selectedCookies.pWWeb === 'NOTACTIVE')" fill="clear" (click)="pWWebAus()">Aus</ion-button>
-            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWWeb === 'NOTACTIVE')" (click)="pWWebAus()">Aus</ion-button>
+            <ion-button [hidden]="(selectedCookies.pWWeb === 'NOTACTIVE')" fill="clear" (click)="pWWebAus()">Aus
+            </ion-button>
+            <ion-button class="active-button" [hidden]="!(selectedCookies.pWWeb === 'NOTACTIVE')" (click)="pWWebAus()">
+              Aus
+            </ion-button>
             <!--for styling purposes one button "active" and one "not active"-->
-            <ion-button [hidden] = "(selectedCookies.pWWeb === 'ACTIVE')" fill="clear" (click)="pWWebAn()">An</ion-button>
-            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWWeb === 'ACTIVE')" (click)="pWWebAn()">An</ion-button>
+            <ion-button [hidden]="(selectedCookies.pWWeb === 'ACTIVE')" fill="clear" (click)="pWWebAn()">An</ion-button>
+            <ion-button class="active-button" [hidden]="!(selectedCookies.pWWeb === 'ACTIVE')" (click)="pWWebAn()">An
+            </ion-button>
 
           </div>
         </div>
       </app-drop-down>
     </div>
+    <app-titled-drop-down title="Cookies in Ihrem Browser verwalten">
+      <p>
+        Cookies tragen dazu bei, dass Sie Websites angenehmer nutzen können. Wenn Sie beispielsweise eine
+        Standardsprache auf einer Website festlegen, kann sich die Website Ihre Auswahl mithilfe von Cookies merken.
+      </p>
+      <p>
+        Sie können einzelne oder alle Cookies blockieren. Dies kann jedoch dazu führen, dass bestimmte Funktionen
+        im Web nicht mehr nutzbar sind. Auf vielen Websites müssen Sie beispielsweise Cookies aktivieren, damit
+        Sie sich anmelden können. So verwalten Sie Cookies in Chrome:
+      </p>
+      <ul>
+        <li>
+          Wählen Sie über das Chrome-Menüsymbol
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+          die Einstellungen aus.
+        </li>
+        <li>
+          Wählen Sie im Abschnitt „Datenschutz und Sicherheit“ die Option „Cookies und andere Websitedaten“ aus.
+        </li>
+      </ul>
+      <p>Anleitungen für andere Browser finden Sie in der Hilfe des entsprechenden Browsers.</p>
+    </app-titled-drop-down>
+    <app-titled-drop-down
+      title="Daten verwalten, die über Google Analytics auf von Ihnen besuchten Websites erhoben werden">
+      <p>Websiteinhaber nutzen von Google Analytics erhobene Daten, um die Funktionalität ihrer Websites zu verbessern.
+        Wenn Sie nicht möchten, dass diese Daten erhoben werden, können Sie ein Browser-Add-on herunterladen und
+        installieren.</p>
+    </app-titled-drop-down>
+    <h2>Cookies </h2>
+    <p>Wir nutzen Cookies, um Ihre Einstellungen zu speichern. Außerdem verwenden wir Cookies zu folgenden Zwecken:</p>
+    <ul>
+      <li>Ausliefern, Verwalten und Verbessern unserer Dienste und Werbung</li>
+      <li>Personalisierung von Inhalten und Werbung auf Grundlage Ihrer Aktivitäten in Google-Diensten (abhängig von Ihren Einstellungen)</li>
+      <li>Analysen und Messungen</li>
+    </ul>
+    <p>Sie haben die Möglichkeit, Ihre Browsereinstellungen so zu konfigurieren, dass einige oder alle Cookies
+      blockiert werden.</p>
+    <div class="right">
+      <ion-button class="confirm" (click)="confirm()">Bestätigen</ion-button>
+    </div>
+
   </div>
+
+
 </ion-content>
 
 

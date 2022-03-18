@@ -6,13 +6,22 @@
 
 p{
   color: gray;
+  font-size: small;
+}
+li{
+  font-size: small;
 }
 h2{
   margin-top: 0px;
+  color: black;
+  font-size: medium;
 }
 
 .center {
   text-align: center;
+}
+.right {
+  text-align: right;
 }
 
 .box{
@@ -44,4 +53,12 @@ ion-button {
 
 .drop-down {
   border-top: thin solid lightgray;
+}
+
+.confirm {
+  --border-radius: 5px;
+  --box-shadow: none;
+  --background: #1a73e8;
+  text-transform: none;
+  color: white;
 }

@@ -1,0 +1,31 @@
+h2 {
+  position: relative;
+  padding: 1em 0.35em;
+  margin: 0;
+  font-size: medium;
+  color: black;
+
+
+  /* Define the style rules for the 'arrow icons' */
+  span {
+    position: absolute;
+    right: 1em;
+    top: 1.2em;
+    font-size: 0.95em;
+  }
+}
+
+/* Following classes display/hide the 'menu'
+// based on the state change detection in the
+// component class */
+.active {
+  display: block
+}
+
+.inactive {
+  display: none;
+}
+
+.wrapper{
+  border-bottom: solid lightgray thin;
+}

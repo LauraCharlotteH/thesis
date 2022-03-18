@@ -1,16 +1,26 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-drop-down',
-  templateUrl: './drop-down.component.html',
-  styleUrls: ['./drop-down.component.scss'],
+  selector: 'app-titled-drop-down',
+  templateUrl: './titled-drop-down.component.html',
+  styleUrls: ['./titled-drop-down.component.scss'],
 })
-export class DropDownComponent implements OnInit {
+export class TitledDropDownComponent implements OnInit {
   /**
    * The body of the drop down element (part that is toggled)
    *
    */
   @ViewChild('expandWrapper', { read: ElementRef }) expandWrapper: ElementRef;
+
+  /**
+   * The name of the assignment that will be displayed as the title for the accordion header
+   *
+   * @public
+   * @property name
+   * @type {string}
+   */
+  @Input()
+  title: string;
 
   /**
    * Determines and stores the accordion state (I.e. opened or closed)

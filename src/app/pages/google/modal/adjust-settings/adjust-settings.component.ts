@@ -21,6 +21,10 @@ export class AdjustSettingsComponent implements OnInit {
   ngOnInit() {
   }
 
+  confirm(){
+    console.log('confirming!');
+    //TODO
+  }
   suchanpassungAn(){
     this.selectedCookies.suchanpassung = ActiveStatus.act;
   }

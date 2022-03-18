@@ -10,6 +10,7 @@ import { GooglePage } from './google.page';
 import {PopUpComponent} from './modal/pop-up/pop-up.component';
 import {AdjustSettingsComponent} from './modal/adjust-settings/adjust-settings.component';
 import {DropDownComponent} from '../../components/drop-down/drop-down.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import {DropDownComponent} from '../../components/drop-down/drop-down.component'
     GooglePage,
     PopUpComponent,
     AdjustSettingsComponent,
-    DropDownComponent
+    DropDownComponent,
+    TitledDropDownComponent
   ]
 })
 export class GooglePageModule {}
