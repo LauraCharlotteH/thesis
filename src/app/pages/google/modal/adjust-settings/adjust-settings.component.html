@@ -88,7 +88,30 @@
       </div>
 
       <app-drop-down>
-        <p>something within</p>
+        <div class="drop-down">
+          <h3>Personalisierte Werbung in der Google Suche</h3>
+          <p>In der Google Suche relevantere Werbung sehen</p>
+          <div align="right">
+            <ion-button [hidden] = "(selectedCookies.pWSuche === 'NOTACTIVE')" fill="clear" (click)="pWSucheAus()">Aus</ion-button>
+            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWSuche === 'NOTACTIVE')" (click)="pWSucheAus()">Aus</ion-button>
+            <!--for styling purposes one button "active" and one "not active"-->
+            <ion-button [hidden] = "(selectedCookies.pWSuche === 'ACTIVE')" fill="clear" (click)="pWSucheAn()">An</ion-button>
+            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWSuche === 'ACTIVE')" (click)="pWSucheAn()">An</ion-button>
+
+          </div>
+        </div>
+        <div class="drop-down">
+          <h3>Personalisierte Werbung auf YouTube & im ganzen Web</h3>
+          <p>Sie sehen relevantere Werbung auf YouTube und Websites im ganzen Web, die Google-Dienste zum Einblenden von Werbung nutzen</p>
+          <div align="right">
+            <ion-button [hidden] = "(selectedCookies.pWWeb === 'NOTACTIVE')" fill="clear" (click)="pWWebAus()">Aus</ion-button>
+            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWWeb === 'NOTACTIVE')" (click)="pWWebAus()">Aus</ion-button>
+            <!--for styling purposes one button "active" and one "not active"-->
+            <ion-button [hidden] = "(selectedCookies.pWWeb === 'ACTIVE')" fill="clear" (click)="pWWebAn()">An</ion-button>
+            <ion-button class="active-button" [hidden] = "!(selectedCookies.pWWeb === 'ACTIVE')" (click)="pWWebAn()">An</ion-button>
+
+          </div>
+        </div>
       </app-drop-down>
     </div>
   </div>

@@ -39,10 +39,50 @@ export class AdjustSettingsComponent implements OnInit {
 
   addsAn(){
     this.selectedCookies.personalisierteWerbung = ActiveStatus.act;
+    this.selectedCookies.pWSuche = ActiveStatus.act;
+    this.selectedCookies.pWWeb = ActiveStatus.act;
   }
 
   addsAus(){
     this.selectedCookies.personalisierteWerbung = ActiveStatus.notact;
+    this.selectedCookies.pWSuche = ActiveStatus.notact;
+    this.selectedCookies.pWWeb = ActiveStatus.notact;
+  }
+
+  pWSucheAn(){
+    this.selectedCookies.pWSuche = ActiveStatus.act;
+    if(this.selectedCookies.pWWeb === ActiveStatus.act){
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.act;
+    }else {
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.neutral;
+    }
+  }
+
+  pWSucheAus(){
+    this.selectedCookies.pWSuche = ActiveStatus.notact;
+    if(this.selectedCookies.pWWeb === ActiveStatus.notact){
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.notact;
+    } else {
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.neutral;
+    }
+  }
+
+  pWWebAn(){
+    this.selectedCookies.pWWeb = ActiveStatus.act;
+    if(this.selectedCookies.pWSuche === ActiveStatus.act){
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.act;
+    }else {
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.neutral;
+    }
+  }
+
+  pWWebAus(){
+    this.selectedCookies.pWWeb = ActiveStatus.notact;
+    if(this.selectedCookies.pWSuche === ActiveStatus.notact){
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.notact;
+    }else {
+      this.selectedCookies.personalisierteWerbung = ActiveStatus.neutral;
+    }
   }
 
 }
