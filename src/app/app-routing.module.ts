@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'facebook',
     loadChildren: () => import('./pages/facebook/facebook.module').then( m => m.FacebookPageModule)
   },
+  {
+    path: 'amazon',
+    loadChildren: () => import('./pages/amazon/amazon.module').then( m => m.AmazonPageModule)
+  },
 ];
 
 @NgModule({
