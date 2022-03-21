@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'youtube',
     loadChildren: () => import('./pages/youtube/youtube.module').then( m => m.YoutubePageModule)
   },
+  {
+    path: 'facebook',
+    loadChildren: () => import('./pages/facebook/facebook.module').then( m => m.FacebookPageModule)
+  },
 ];
 
 @NgModule({

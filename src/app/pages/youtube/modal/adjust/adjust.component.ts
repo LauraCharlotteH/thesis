@@ -1,16 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ActiveStatus, ICookieScore} from '../../../../interfaces/interfaces';
-import {ModalController} from "@ionic/angular";
-import {Router} from "@angular/router";
+import {ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
 import {ScoreCardService} from "../../../../services/score-card/score-card.service";
 
-
 @Component({
-  selector: 'app-adjust-settings',
-  templateUrl: './adjust-settings.component.html',
-  styleUrls: ['./adjust-settings.component.scss'],
+  selector: 'app-adjust',
+  templateUrl: './adjust.component.html',
+  styleUrls: ['./adjust.component.scss'],
 })
-export class AdjustSettingsComponent implements OnInit {
+export class AdjustComponent implements OnInit {
   selectedCookies: {[key: string]: ActiveStatus} = {
     suchanpassung: ActiveStatus.neutral,
     youtubeverlauf: ActiveStatus.neutral,
@@ -34,7 +33,7 @@ export class AdjustSettingsComponent implements OnInit {
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
     this.modalCtrl.dismiss();
-    this.router.navigateByUrl('/youtube');
+    this.router.navigateByUrl('/facebook');
   }
   suchanpassungAn(){
     this.selectedCookies.suchanpassung = ActiveStatus.act;

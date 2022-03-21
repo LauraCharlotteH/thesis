@@ -8,6 +8,9 @@ import { YoutubePageRoutingModule } from './youtube-routing.module';
 
 import { YoutubePage } from './youtube.page';
 import {PopUpComponent} from './modal/pop-up/pop-up.component';
+import {AdjustComponent} from './modal/adjust/adjust.component';
+import {DropDownComponent} from '../../components/drop-down/drop-down.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 
 @NgModule({
   imports: [
@@ -16,6 +19,6 @@ import {PopUpComponent} from './modal/pop-up/pop-up.component';
     IonicModule,
     YoutubePageRoutingModule
   ],
-  declarations: [YoutubePage, PopUpComponent]
+  declarations: [YoutubePage, PopUpComponent, AdjustComponent, DropDownComponent, TitledDropDownComponent]
 })
 export class YoutubePageModule {}

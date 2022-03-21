@@ -1,0 +1,68 @@
+.logo{
+  width: 258px;
+}
+
+#wrapper{
+  width: 758px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+  color: gray;
+  font-size: small;
+}
+li{
+  font-size: small;
+}
+h2{
+  margin-top: 0px;
+  color: black;
+  font-size: medium;
+}
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.box{
+  border: solid lightgray;
+  border-radius: 1em;
+  border-width: thin;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+ion-button {
+  --box-shadow: none;
+  --padding-left: 80px;
+  text-transform: none;
+  color: #4285F4;
+  border: thin solid lightgray;
+  border-radius: 5px;
+}
+
+.active-button {
+  --box-shadow: none;
+  --padding-left: 80px;
+  text-transform: none;
+  color: #1d53a9;
+  --background: #e8f0fe;
+  border: thin solid lightgray;
+  border-radius: 5px;
+}
+
+.drop-down {
+  border-top: thin solid lightgray;
+}
+
+.confirm {
+  --border-radius: 5px;
+  --box-shadow: none;
+  --background: #1a73e8;
+  text-transform: none;
+  color: white;
+}
