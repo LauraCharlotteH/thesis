@@ -35,6 +35,12 @@ ion-header {
   margin-bottom: 5px;
   transparency: 50%;
 }
+//FACEBOOK
+.facebook-modal{
+  --width: 680px;
+  --height: 662px;
+  --border-radius: 3px;
+}
 // YOUTUBE PAGE
 .youtube-modal{
   --width: 670px;
@@ -63,7 +69,7 @@ ion-header {
 
 
 :root {
-  --ion-text-color: #687864;
+  //--ion-text-color: #687864;
 
 
   --ion-color-primary: #31708E;
