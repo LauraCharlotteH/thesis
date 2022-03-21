@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'google',
     loadChildren: () => import('./pages/google/google.module').then( m => m.GooglePageModule)
   },
+  {
+    path: 'youtube',
+    loadChildren: () => import('./pages/youtube/youtube.module').then( m => m.YoutubePageModule)
+  },
 ];
 
 @NgModule({

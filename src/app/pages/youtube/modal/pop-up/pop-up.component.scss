@@ -1,0 +1,26 @@
+.wrapper{
+  background: #fff url("../../../../../assets/youtube/yt-first-popup.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  vertical-align: sub;
+}
+
+.yt-button {
+  position: absolute;
+  --border-radius: 2px;
+  --box-shadow: none;
+  --background: #065fd4;
+  text-transform: none;
+  margin: 20px;
+}
+
+.accept{
+  bottom: 0px;
+  right: 0px;
+}
+
+.adjust{
+  bottom: 0px;
+  right: 160px;
+}

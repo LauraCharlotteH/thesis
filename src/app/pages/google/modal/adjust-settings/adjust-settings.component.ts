@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActiveStatus} from '../../../../interfaces/interfaces';
+import {ModalController} from "@ionic/angular";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -16,14 +18,15 @@ export class AdjustSettingsComponent implements OnInit {
     pWWeb: ActiveStatus.neutral,
   };
 
-  constructor() { }
+  constructor(protected modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {
   }
 
   confirm(){
     console.log('confirming!');
-    //TODO
+    this.modalCtrl.dismiss();
+    this.router.navigateByUrl('/youtube');
   }
   suchanpassungAn(){
     this.selectedCookies.suchanpassung = ActiveStatus.act;

@@ -3,6 +3,7 @@ import {ICookieScore} from '../../../../interfaces/interfaces';
 import {ScoreCardService} from '../../../../services/score-card/score-card.service';
 import {ModalController} from '@ionic/angular';
 import {AdjustSettingsComponent} from '../adjust-settings/adjust-settings.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-pop-up',
@@ -11,7 +12,7 @@ import {AdjustSettingsComponent} from '../adjust-settings/adjust-settings.compon
 })
 export class PopUpComponent implements OnInit {
 
-  constructor(public scoreCardService: ScoreCardService, protected modalCtrl: ModalController) { }
+  constructor(public scoreCardService: ScoreCardService, protected modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {}
 
@@ -23,9 +24,12 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 100
     };
     this.scoreCardService.setCookies(cookies);
+    this.modalCtrl.dismiss();
+    this.router.navigateByUrl('/youtube');
   }
 
   async adjustSettings(){
+    this.modalCtrl.dismiss();
     const modal = await this.modalCtrl.create({
       component: AdjustSettingsComponent,
       backdropDismiss: false,

@@ -35,8 +35,14 @@ ion-header {
   margin-bottom: 5px;
   transparency: 50%;
 }
+// YOUTUBE PAGE
+.youtube-modal{
+  --width: 670px;
+  --height: 864px;
+  --border-radius: 2px;
+}
 
-
+// GOOGLE PAGE
 .google-modal{
   --width: 800px;
   --height: 800px;
