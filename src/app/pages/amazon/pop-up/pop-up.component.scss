@@ -1,0 +1,29 @@
+.wrapper{
+  margin-top: 40px;
+  margin-right: 10%;
+  margin-left: 10%;
+  bottom: 2px;
+  overflow: scroll;
+}
+
+p{
+  font-size: small;
+}
+
+ion-button{
+  border-radius: 8px;
+  font-size: small;
+  text-transform: none;
+  color: black;
+  --background: white;
+  --box-shadow: rgba(213, 217, 217, 0.5) 0px 2px 5px 0px;
+  --border: rgb(213, 217, 217);
+}
+.yellow{
+  --background: rgb(255, 216, 20);
+}
+
+.outline{
+  --border-color: rgb(213, 217, 217);
+  --border-width: thin;
+}
