@@ -34,7 +34,7 @@ export class PopUpComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: AdjustComponent,
       backdropDismiss: false,
-      cssClass: 'yt-adjust'
+      cssClass: 'fullsize-adjust'
     });
 
     modal.onDidDismiss().then(async (data: any) => {

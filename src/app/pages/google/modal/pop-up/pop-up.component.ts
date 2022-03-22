@@ -36,7 +36,7 @@ export class PopUpComponent implements OnInit {
       componentProps: {
         name: 'cluster is XXX'
       },
-      cssClass: 'google-adjust'
+      cssClass: 'fullsize-adjust'
     });
 
     modal.onDidDismiss().then(async (data: any) => {

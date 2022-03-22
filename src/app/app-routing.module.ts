@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'amazon',
     loadChildren: () => import('./pages/amazon/amazon.module').then( m => m.AmazonPageModule)
   },
+  {
+    path: 'wikipedia',
+    loadChildren: () => import('./pages/wikipedia/wikipedia.module').then( m => m.WikipediaPageModule)
+  },
 ];
 
 @NgModule({

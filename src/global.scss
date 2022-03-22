@@ -53,11 +53,6 @@ ion-header {
   --height: 864px;
   --border-radius: 2px;
 }
-.yt-adjust{
-  --width: 100%;
-  --height: 90vh;
-  top: 10vh;
-}
 
 // GOOGLE PAGE
 .google-modal{
@@ -66,7 +61,7 @@ ion-header {
   --border-radius: 1em;
 }
 
-.google-adjust{
+.fullsize-adjust{
   --width: 100%;
   --height: 90vh;
   top: 10vh;

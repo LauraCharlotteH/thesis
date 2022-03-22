@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import {ICookieScore} from '../../../interfaces/interfaces';
 import {ScoreCardService} from '../../../services/score-card/score-card.service';
 import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
-import {AdjustComponent} from '../adjust/adjust.component';
+import {ICookieScore} from '../../../interfaces/interfaces';
 
 @Component({
-  selector: 'app-pop-up',
-  templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.scss'],
+  selector: 'app-adjust',
+  templateUrl: './adjust.component.html',
+  styleUrls: ['./adjust.component.scss'],
 })
-export class PopUpComponent implements OnInit {
+export class AdjustComponent implements OnInit {
 
   constructor(public scoreCardService: ScoreCardService, protected modalCtrl: ModalController, private router: Router) { }
 
   ngOnInit() {}
 
-  accept(){
+  acceptAll(){
     //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'amazon.com',
@@ -29,23 +28,17 @@ export class PopUpComponent implements OnInit {
     this.router.navigateByUrl('/wikipedia');
   }
 
-  async adjust(){
+  async acceptSettings(){
+    //TODO how many cookies?
+    const cookies: ICookieScore = {
+      website: 'amazon.com',
+      noOfCookies: 100,
+      acceptedCookies: 100
+    };
+    this.scoreCardService.setCookies(cookies);
+    console.log('confirming!');
     this.modalCtrl.dismiss();
-    const modal = await this.modalCtrl.create({
-      component: AdjustComponent,
-      backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
-      cssClass: 'fullsize-adjust'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
-    return await modal.present();
+    this.router.navigateByUrl('/wikipedia');
   }
 
 }
