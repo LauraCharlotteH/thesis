@@ -51,24 +51,75 @@
           <h2>Werbe-Cookies</h2>
         </ion-col>
         <ion-col>
-          <ion-radio-group>
+          <ion-radio-group (ionChange)="addsChange($event)">
             <span>
-            <ion-label>An</ion-label><ion-radio value="an"></ion-radio>
+            <ion-label>An</ion-label><ion-radio value="on"></ion-radio>
           </span>
             <span>
-            <ion-label>Aus</ion-label><ion-radio value="aus"></ion-radio>
+            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
           </span>
           </ion-radio-group>
-
         </ion-col>
       </ion-row>
     </ion-grid>
+    <p>
+      Wir verwenden Cookies auch, um bestimmte Arten von Anzeigen zu schalten, insbesondere für Produkte und Dienste,
+      die bei Amazon nicht erhältlich sind, und für bestimmte Anzeigen, die aufgrund Ihrer Interessen relevant sind.
+      Auch zugelassene Drittparteien können Cookies setzen, wenn Sie mit Amazon Services interagieren. Dritte verwenden
+      Cookies im Prozess der Bereitstellung von Werbeinhalten, insbesondere Anzeigen, die aufgrund Ihrer Interessen
+      relevant sind, um die Effektivität ihrer Anzeigen zu messen und um Dienstleistungen im Namen von Amazon zu
+      erbringen.
+    </p>
+    <p>Um mehr darüber zu erfahren, wie Amazon interessenbezogene Werbung anbietet, besuchen Sie bitte den Hinweis zu
+      interessenbezogener Werbung. Wechseln Sie bitte zur Seite Einstellungen für Werbung, um Ihre Einstellungen für
+      interessenbezogene Werbung anzupassen. </p>
     <div>
       <p>
         Sie können Ihre Cookie-Einstellungen jederzeit auf dieser Seite mit den Cookie-Einstellungen ändern. Diese Seite
         erreichen Sie über Ihr Konto und den Cookie-Hinweis. Für weitere Informationen über Cookies und wie wir sie
         verwenden, lesen Sie bitte unseren Cookie-Hinweis.
       </p>
+      <app-titled-drop-down title="Einstellungen für Werbe-Cookies anpassen">
+        <div class="drop-down">
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col>
+                <h3>Amazon-Werbung</h3>
+              </ion-col>
+              <ion-col>
+                <ion-radio-group (ionChange)="amazonAddsChange($event)">
+            <span>
+            <ion-label>An</ion-label><ion-radio value="on" checked="true"></ion-radio>
+          </span>
+                  <span>
+            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
+          </span>
+                </ion-radio-group>
+              </ion-col>
+            </ion-row>
+            <ion-row class="ion-align-items-center">
+              <ion-col>
+                <h3>Werbung zugelassenener Dritter</h3>
+              </ion-col>
+              <ion-col>
+                <ion-radio-group (ionChange)="thirdPartyAddsChange($event)">
+            <span>
+            <ion-label>An</ion-label><ion-radio value="on"></ion-radio>
+          </span>
+                  <span>
+            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
+          </span>
+                </ion-radio-group>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-button size="small" class="outline" fill="outline">Cookies für Werbung von Drittanbietern anpassen
+          </ion-button>
+        </div>
+      </app-titled-drop-down>
     </div>
+    <p>Sie können Ihre Cookie-Einstellungen jederzeit auf dieser Seite mit den Cookie-Einstellungen ändern. Diese Seite
+      erreichen Sie über Ihr Konto und den Cookie-Hinweis. Für weitere Informationen über Cookies und wie wir sie
+      verwenden, lesen Sie bitte unseren Cookie-Hinweis. </p>
   </div>
 </ion-content>
