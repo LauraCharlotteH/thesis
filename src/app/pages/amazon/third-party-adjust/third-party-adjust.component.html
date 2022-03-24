@@ -1,0 +1,83 @@
+<ion-content>
+  <div id="wrapper">
+    <h1>Cookie-Einstellungen je nach Partner anpassen</h1>
+    <div class="border-bottom">
+      <section>
+        <ion-button size="small" class="yellow" (click)="acceptAll()">Alle Cookies von Drittanbietern annehmen
+        </ion-button>
+        <ion-button size="small" class="outline" fill="outline" (click)="acceptSettings()">Speichern und zurück zu den
+          Einstellungen
+        </ion-button>
+      </section>
+    </div>
+    <h3>Drittanbieter, die am IAB TCF teilnehmen</h3>
+    <p>
+      Einige genehmigte Drittanbieter nehmen am Interactive Advertising Bureau Transparency Consent Framework (IAB TCF)
+      teil. Dieses Framework ermöglicht Benutzern die Zustimmung zu Cookies und die Genehmigung ihrer Verwendung zu
+      Datenverarbeitungszwecken gemäß dem IAB TCF-Standard. Wenn Sie unten keinen Drittanbieter akzeptieren, stimmen Sie
+      der Datenverarbeitung über die von diesem Drittanbieter verwendeten Cookies nicht zu und widersprechen dieser
+      Verarbeitung. Weitere Informationen zu genehmigten Drittanbietern, die am IAB TCF teilnehmen, finden Sie unten.
+      Ihre Zustimmung gilt für die Verarbeitungszwecke, die von den einzelnen TCF-Anbietern im Menü „Details“ unten
+      erklärt werden. TCF-Anbieter verarbeiten Informationen möglicherweise zu begrenzten Zwecken, ohne Ihre Zustimmung
+      anzufordern. Diese begrenzten Zwecke werden im Menü „Details“ als „Besondere Zwecke“ aufgelistet.
+    </p>
+    <!--Begin first table -->
+    <ion-grid>
+      <ion-row *ngFor="let party of iabTcfList" class="stripe">
+        <ion-col size="10">
+          <p>{{party.title}}</p>
+          <app-titled-drop-down title="Details">
+            <p>
+              {{party.details}}
+            </p>
+          </app-titled-drop-down>
+        </ion-col>
+        <ion-col>
+          <ion-radio-group [(ngModel)]="party.accept">
+            <span>
+            <ion-label>Aus</ion-label><ion-radio [value]="false"></ion-radio>
+            </span>
+            <span>
+            <ion-label>Ein</ion-label><ion-radio [value]="true"></ion-radio>
+            </span>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h3>Drittanbieter, die nicht am IAB TCF teilnehmen</h3>
+    <ion-grid>
+      <ion-row *ngFor="let party of nonIabTcfList" class="stripe">
+        <ion-col size="10">
+          <p>{{party.title}}</p>
+          <app-titled-drop-down title="Details">
+            <p>
+              {{party.details}}
+            </p>
+          </app-titled-drop-down>
+        </ion-col>
+        <ion-col>
+          <ion-radio-group [(ngModel)]="party.accept">
+            <span>
+            <ion-label>Aus</ion-label><ion-radio [value]="false"></ion-radio>
+            </span>
+            <span>
+            <ion-label>Ein</ion-label><ion-radio [value]="true"></ion-radio>
+            </span>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-align-items-end end">
+      <span>
+        <ion-button size="small" class="outline" fill="outline" (click)="acceptSettings()">Speichern und zurück zu den
+          Einstellungen
+        </ion-button>
+        <ion-button size="small" class="outline" fill="outline" (click)="purposeAdjust()">Cookie-Einstellungen je nach Zweck anpassen</ion-button>
+      </span>
+    </div>
+
+    <!-- ende -->
+  </div>
+</ion-content>

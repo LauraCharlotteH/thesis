@@ -10,6 +10,8 @@ import { AmazonPage } from './amazon.page';
 import {PopUpComponent} from './pop-up/pop-up.component';
 import {AdjustComponent} from './adjust/adjust.component';
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
+import {ThirdPartyAdjustComponent} from './third-party-adjust/third-party-adjust.component';
+import {PurposeAdjustComponent} from './purpose-adjust/purpose-adjust.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,6 @@ import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-
     IonicModule,
     AmazonPageRoutingModule
   ],
-  declarations: [AmazonPage, PopUpComponent, AdjustComponent, TitledDropDownComponent]
+  declarations: [AmazonPage, PopUpComponent, AdjustComponent, ThirdPartyAdjustComponent, PurposeAdjustComponent, TitledDropDownComponent]
 })
 export class AmazonPageModule {}

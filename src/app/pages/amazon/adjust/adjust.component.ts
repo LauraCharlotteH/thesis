@@ -3,6 +3,7 @@ import {ScoreCardService} from '../../../services/score-card/score-card.service'
 import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ActiveStatus, ICookieScore} from '../../../interfaces/interfaces';
+import {ThirdPartyAdjustComponent} from '../third-party-adjust/third-party-adjust.component';
 
 @Component({
   selector: 'app-adjust',
@@ -15,6 +16,7 @@ export class AdjustComponent implements OnInit {
     amazonAdds: ActiveStatus.neutral,
     thirdPartyAdds : ActiveStatus.neutral,
   };
+  noOfThirdPartyCookies: number;
 
   constructor(public scoreCardService: ScoreCardService, protected modalCtrl: ModalController, private router: Router) { }
 
@@ -76,6 +78,28 @@ export class AdjustComponent implements OnInit {
       this.selectedCookies.adds = (this.selectedCookies.amazonAdds === ActiveStatus.notact)?ActiveStatus.notact: ActiveStatus.neutral;
       this.selectedCookies.thirdPartyAdds = ActiveStatus.notact;
     }
+  }
+
+  async thirdPartyAdjust(){
+    const modal = await this.modalCtrl.create({
+      component: ThirdPartyAdjustComponent,
+      backdropDismiss: false,
+      componentProps: {
+        name: 'cluster is XXX'
+      },
+      cssClass: 'fullsize-adjust'
+    });
+
+    modal.onDidDismiss().then(async (data: any) => {
+      if (data.data) {
+        console.log('data is: ' + data.data);
+        this.noOfThirdPartyCookies = data;
+      } else {
+        //no data means "accept all" was selected in other popup, so dismiss all
+        this.modalCtrl.dismiss();
+      }
+    });
+    return await modal.present();
   }
 
 }

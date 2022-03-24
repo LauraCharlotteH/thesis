@@ -1,17 +1,19 @@
 h2 {
   position: relative;
-  padding: 1em 0.35em;
-  margin: 0;
+  //padding: 1em 0.35em;
+  margin: var(--header-margin, 1em);
   font-size: medium;
-  color: black;
+  color: var(--header-color, #000);
 
 
   /* Define the style rules for the 'arrow icons' */
   span {
-    position: absolute;
-    right: 1em;
-    top: 1.2em;
+    display: block;
+    float: var(--arrow-position, right);
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 0.95em;
+    color: black;
   }
 }
 

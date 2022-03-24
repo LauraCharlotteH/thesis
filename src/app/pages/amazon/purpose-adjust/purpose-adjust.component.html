@@ -1,0 +1,80 @@
+<ion-content>
+  <div id="wrapper">
+    <h1>Cookie-Einstellungen je nach Zweck anpassen</h1>
+    <div class="border-bottom">
+      <p>
+        Sie können Ihre Einstellungen dafür festlegen, wie zugelassene Dritte, die am IAB TCF teilnehmen, personenbezogene Daten verarbeiten dürfen. Wenn Sie nicht zustimmen, bedeutet dies, dass Sie der Datenverarbeitung durch Dritte, die am IAB TCF teilnehmen, nicht zustimmen und widersprechen.
+      </p>
+      <section>
+        <ion-button size="small" class="yellow" (click)="acceptAll()">Für alle Zwecke annehmen
+        </ion-button>
+        <ion-button size="small" class="outline" fill="outline" (click)="acceptSettings()">Speichern und zurück zu den
+          Einstellungen
+        </ion-button>
+      </section>
+    </div>
+    <h3>Zustimmungszwecke</h3>
+    <!--Begin first table -->
+    <ion-grid>
+      <ion-row *ngFor="let party of purposes" class="stripe">
+        <ion-col size="10">
+          <p>{{party.title}}</p>
+          <app-titled-drop-down title="Details">
+            <p>
+              {{party.details}}
+            </p>
+          </app-titled-drop-down>
+        </ion-col>
+        <ion-col>
+          <ion-radio-group [(ngModel)]="party.accept">
+            <span>
+            <ion-label>Aus</ion-label><ion-radio [value]="false"></ion-radio>
+            </span>
+            <span>
+            <ion-label>Ein</ion-label><ion-radio [value]="true"></ion-radio>
+            </span>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h3>Spezialzwecke</h3>
+    <ion-grid>
+      <ion-row *ngFor="let party of specialPurposes" class="stripe">
+        <ion-col>
+          <p>{{party.title}}</p>
+          <app-titled-drop-down title="Details">
+            <p>
+              {{party.details}}
+            </p>
+          </app-titled-drop-down>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h3>Funktionen</h3>
+    <ion-grid>
+      <ion-row *ngFor="let party of functions" class="stripe">
+        <ion-col>
+          <p>{{party.title}}</p>
+          <app-titled-drop-down title="Details">
+            <p>
+              {{party.details}}
+            </p>
+          </app-titled-drop-down>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-align-items-end end">
+      <span>
+        <ion-button size="small" class="outline" fill="outline" (click)="acceptSettings()">Speichern und zurück zu den
+          Einstellungen
+        </ion-button>
+        <ion-button size="small" class="outline" fill="outline" (click)="thirdPartyAdjust()">Cookies für Werbung von Drittanbietern anpassen</ion-button>
+      </span>
+    </div>
+
+    <!-- ende -->
+  </div>
+</ion-content>

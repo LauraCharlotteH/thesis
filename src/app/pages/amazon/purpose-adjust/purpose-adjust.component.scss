@@ -1,0 +1,85 @@
+#wrapper{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.border-bottom{
+  border-bottom: thin solid lightgray;
+  padding-bottom: 12px;
+}
+
+ion-button{
+  border-radius: 8px;
+  font-size: small;
+  text-transform: none;
+  color: black;
+  --background: white;
+  --box-shadow: rgba(213, 217, 217, 0.5) 0px 2px 5px 0px;
+  --border: rgb(213, 217, 217);
+}
+.yellow{
+  --background: rgb(255, 216, 20);
+}
+
+.outline{
+  --border-color: rgb(213, 217, 217);
+  --border-width: thin;
+}
+h1{
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px
+}
+h2{
+  color: rgb(196, 85, 0);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px
+}
+h3{
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px
+}
+
+p{
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px
+}
+span{
+  display: block;
+  float: right;
+  margin-left: 10px;
+}
+
+//for table with alternating rows
+ion-row{
+  border: thin lightgray solid;
+}
+
+ion-col{
+  p{
+    margin: 0px;
+  }
+}
+
+ion-radio{
+  background-color: white;
+}
+
+.stripe:nth-child(even){
+  background-color: #f6f6f6;
+}
+
+app-titled-drop-down{
+  --header-color: #077185;
+  --arrow-position: left;
+  --header-margin: 0px;
+}
+.end{
+  margin-bottom: 100px;
+}

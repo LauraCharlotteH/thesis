@@ -16,11 +16,12 @@ export class PopUpComponent implements OnInit {
 
   ngOnInit() {}
 
-  accept(){
+  accept(noOfCookies?: number){
+    const noOfC = (noOfCookies)? noOfCookies : 100;
     //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'amazon.com',
-      noOfCookies: 100,
+      noOfCookies: noOfC,
       acceptedCookies: 100
     };
     this.scoreCardService.setCookies(cookies);
@@ -43,6 +44,7 @@ export class PopUpComponent implements OnInit {
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
         console.log('data is: ' + data.data);
+        this.accept(data.data);
       }
     });
     return await modal.present();
