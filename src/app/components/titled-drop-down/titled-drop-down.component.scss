@@ -1,9 +1,10 @@
 h2 {
   position: relative;
-  //padding: 1em 0.35em;
-  margin: var(--header-margin, 1em);
-  font-size: medium;
+  padding: var(--header-padding, 1em);
+  margin:0px;
+  font-size: var(--header-font-size, medium);
   color: var(--header-color, #000);
+  background: var(--header-background, white);
 
 
   /* Define the style rules for the 'arrow icons' */
