@@ -12,9 +12,9 @@ import {ThirdPartyAdjustComponent} from '../third-party-adjust/third-party-adjus
 })
 export class AdjustComponent implements OnInit {
   selectedCookies: {[key: string]: ActiveStatus} = {
-    adds: ActiveStatus.neutral,
-    amazonAdds: ActiveStatus.neutral,
-    thirdPartyAdds : ActiveStatus.neutral,
+    adds: ActiveStatus.notact,
+    amazonAdds: ActiveStatus.notact,
+    thirdPartyAdds : ActiveStatus.notact,
   };
   noOfThirdPartyCookies: number;
 
@@ -49,11 +49,11 @@ export class AdjustComponent implements OnInit {
   }
 
   addsChange(event) {
-    if(event.detail.value === 'on'){
+    if(event.detail.value === 'ACTIVE'){
       this.selectedCookies.adds = ActiveStatus.act;
       this.selectedCookies.amazonAdds = ActiveStatus.act;
       this.selectedCookies.thirdPartyAdds = ActiveStatus.act;
-    }else{
+    }else if(event.detail.value === 'NOTACTIVE'){
       this.selectedCookies.adds = ActiveStatus.notact;
       this.selectedCookies.amazonAdds = ActiveStatus.notact;
       this.selectedCookies.thirdPartyAdds = ActiveStatus.notact;
@@ -61,7 +61,7 @@ export class AdjustComponent implements OnInit {
   }
 
   amazonAddsChange(event){
-    if(event.detail.value === 'on'){
+    if(event.detail.value === 'ACTIVE'){
       this.selectedCookies.adds = (this.selectedCookies.thirdPartyAdds === ActiveStatus.act)?ActiveStatus.act: ActiveStatus.neutral;
       this.selectedCookies.amazonAdds = ActiveStatus.act;
     }else{
@@ -71,7 +71,7 @@ export class AdjustComponent implements OnInit {
   }
 
   thirdPartyAddsChange(event){
-    if(event.detail.value === 'on'){
+    if(event.detail.value === 'ACTIVE'){
       this.selectedCookies.adds = (this.selectedCookies.amazonAdds === ActiveStatus.act)?ActiveStatus.act: ActiveStatus.neutral;
       this.selectedCookies.thirdPartyAdds = ActiveStatus.act;
     }else{
@@ -100,6 +100,10 @@ export class AdjustComponent implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+  print(){
+    console.log(this.selectedCookies);
   }
 
 }

@@ -51,12 +51,12 @@
           <h2>Werbe-Cookies</h2>
         </ion-col>
         <ion-col>
-          <ion-radio-group (ionChange)="addsChange($event)">
+          <ion-radio-group (ionChange)="addsChange($event)" [ngModel]="selectedCookies.adds">
             <span>
-            <ion-label>An</ion-label><ion-radio value="on"></ion-radio>
+            <ion-label>An</ion-label><ion-radio value="ACTIVE"></ion-radio>
           </span>
             <span>
-            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
+            <ion-label>Aus</ion-label><ion-radio value="NOTACTIVE"></ion-radio>
           </span>
           </ion-radio-group>
         </ion-col>
@@ -87,12 +87,12 @@
                 <h3>Amazon-Werbung</h3>
               </ion-col>
               <ion-col>
-                <ion-radio-group (ionChange)="amazonAddsChange($event)">
+                <ion-radio-group (ionChange)="amazonAddsChange($event)" [ngModel]="selectedCookies.amazonAdds">
             <span>
-            <ion-label>An</ion-label><ion-radio value="on" checked="true"></ion-radio>
+            <ion-label>An</ion-label><ion-radio value="ACTIVE"></ion-radio>
           </span>
                   <span>
-            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
+            <ion-label>Aus</ion-label><ion-radio value="NOTACTIVE"></ion-radio>
           </span>
                 </ion-radio-group>
               </ion-col>
@@ -102,12 +102,12 @@
                 <h3>Werbung zugelassenener Dritter</h3>
               </ion-col>
               <ion-col>
-                <ion-radio-group (ionChange)="thirdPartyAddsChange($event)">
+                <ion-radio-group (ionChange)="thirdPartyAddsChange($event)"[ngModel]="selectedCookies.thirdPartyAdds">
             <span>
-            <ion-label>An</ion-label><ion-radio value="on"></ion-radio>
+            <ion-label>An</ion-label><ion-radio value="ACTIVE"></ion-radio>
           </span>
                   <span>
-            <ion-label>Aus</ion-label><ion-radio value="off"></ion-radio>
+            <ion-label>Aus</ion-label><ion-radio value="NOTACTIVE"></ion-radio>
           </span>
                 </ion-radio-group>
               </ion-col>
@@ -122,4 +122,6 @@
       erreichen Sie über Ihr Konto und den Cookie-Hinweis. Für weitere Informationen über Cookies und wie wir sie
       verwenden, lesen Sie bitte unseren Cookie-Hinweis. </p>
   </div>
+
+  <ion-button (click)="print()">print list</ion-button>
 </ion-content>
