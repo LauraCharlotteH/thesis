@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: WikipediaPage
+  },
+  {
+    path: 'cookie-statement',
+    loadChildren: () => import('./cookie-statement/cookie-statement.module').then( m => m.CookieStatementPageModule)
   }
 ];
 

@@ -1,0 +1,64 @@
+.wrapper{
+  padding: 16px;
+  max-width: 60em;
+  margin: auto;
+}
+
+h1 {
+  border-bottom-color: rgb(162, 169, 177);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: rgb(0, 0, 0);
+  direction: ltr;
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  font-size: 28.8px;
+  font-weight: 400;
+  line-height: 37.4333px;
+  margin: 0px 0px 7.2px;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  direction: ltr;
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 27.3px;
+  border-bottom: thin lightgray solid;
+}
+
+p {
+  color: rgb(32, 33, 34);
+  direction: ltr;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 22.4px;
+  margin: 7px 0px;
+}
+
+li {
+  color: rgb(32, 33, 34);
+  direction: ltr;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 22.4px;
+  margin: 7px 0px;
+}
+
+.wikitable {
+  background-color: #f8f9fa;
+  color: #202122;
+  margin: 1em 0;
+  border: 1px solid #a2a9b1;
+  border-collapse: collapse;
+
+  th {
+    background-color: #eaecf0;
+    text-align: center;
+  }
+  td{
+    border: 1px solid #a2a9b1;
+    padding: 0.2em 0.4em;
+  }
+}
+
