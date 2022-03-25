@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ModalController} from '@ionic/angular';
+import {PopUpComponent} from './pop-up/pop-up.component';
 
 @Component({
   selector: 'app-bild',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BildPage implements OnInit {
 
-  constructor() { }
+  constructor(protected modalCtrl: ModalController) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    const modal = await this.modalCtrl.create({
+      component: PopUpComponent,
+      backdropDismiss: false,
+      componentProps: {
+        name: 'cluster is XXX'
+      },
+      cssClass: 'bild-modal'
+    });
+
+    modal.onDidDismiss().then(async (data: any) => {
+      if (data.data) {
+        console.log('data is: ' + data.data);
+      }
+    });
+    return await modal.present();
   }
 
 }

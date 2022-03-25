@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { BildPageRoutingModule } from './bild-routing.module';
 
 import { BildPage } from './bild.page';
+import {PopUpComponent} from './pop-up/pop-up.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { BildPage } from './bild.page';
     IonicModule,
     BildPageRoutingModule
   ],
-  declarations: [BildPage]
+  declarations: [BildPage, PopUpComponent]
 })
 export class BildPageModule {}

@@ -36,6 +36,13 @@ ion-header {
   transparency: 50%;
 }
 
+.bild-modal {
+  --padding: 20px 30px;
+  --border-radius: 6px;
+  --width: 810px;
+  --height: 735px;
+}
+
 .amazon-modal {
   --position: relative;
   --width: 100%;
