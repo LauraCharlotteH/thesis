@@ -39,6 +39,26 @@ const routes: Routes = [
     path: 'wikipedia',
     loadChildren: () => import('./pages/wikipedia/wikipedia.module').then( m => m.WikipediaPageModule)
   },
+  {
+    path: 'bild',
+    loadChildren: () => import('./pages/bild/bild.module').then( m => m.BildPageModule)
+  },
+  {
+    path: 'spiegel',
+    loadChildren: () => import('./pages/spiegel/spiegel.module').then( m => m.SpiegelPageModule)
+  },
+  {
+    path: 'gmx',
+    loadChildren: () => import('./pages/gmx/gmx.module').then( m => m.GmxPageModule)
+  },
+  {
+    path: 'web',
+    loadChildren: () => import('./pages/web/web.module').then( m => m.WebPageModule)
+  },
+  {
+    path: 'ebay',
+    loadChildren: () => import('./pages/ebay/ebay.module').then( m => m.EbayPageModule)
+  },
 ];
 
 @NgModule({
