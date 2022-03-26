@@ -13,18 +13,21 @@ import {DropDownComponent} from '../../components/drop-down/drop-down.component'
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    GooglePageRoutingModule
-  ],
-  declarations: [
-    GooglePage,
-    PopUpComponent,
-    AdjustSettingsComponent,
-    DropDownComponent,
-    TitledDropDownComponent
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        GooglePageRoutingModule
+    ],
+    exports: [
+        TitledDropDownComponent
+    ],
+    declarations: [
+        GooglePage,
+        PopUpComponent,
+        AdjustSettingsComponent,
+        DropDownComponent,
+        TitledDropDownComponent
+    ]
 })
 export class GooglePageModule {}

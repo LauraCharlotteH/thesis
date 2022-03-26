@@ -5,6 +5,8 @@ h2 {
   font-size: var(--header-font-size, medium);
   color: var(--header-color, #000);
   background: var(--header-background, white);
+  font-family: var(--header-font-family, normal);
+  font-weight: var(--header-font-weight, normal);
 
 
   /* Define the style rules for the 'arrow icons' */

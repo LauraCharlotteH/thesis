@@ -37,8 +37,28 @@
             </p>
           </div>
           <div class="flex-item">
-            <!-- TODO DROPDOWNS -->
-            <button class="my-button accept-button">Alle akzeptieren</button>
+            <app-titled-drop-down title="Informationen auf einem Gerät speichern und/oder abrufen">
+              <p class="drop-down-body">
+                Für die Ihnen angezeigten Verarbeitungszwecke können Cookies, Geräte-Kennungen oder andere Informationen auf Ihrem Gerät gespeichert oder abgerufen werden.
+              </p>
+            </app-titled-drop-down>
+            <app-titled-drop-down title="Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessungen, Erkentnisse über Zielgruppen und Produktentwicklungen">
+              <p class="drop-down-body">
+                Anzeigen und Inhalte können basierend auf einem Profil personalisiert werden. Es können mehr Daten hinzugefügt werden, um Anzeigen und Inhalte besser zu personalisieren. Die Performance von Anzeigen und Inhalten kann gemessen werden. Erkenntnisse über Zielgruppen, die die Anzeigen und Inhalte betrachtet haben, können abgeleitet werden. Daten können verwendet werden, um Benutzerfreundlichkeit, Systeme und Software aufzubauen oder zu verbessern.
+              </p>
+            </app-titled-drop-down>
+            <app-titled-drop-down title="Fremdinhalte anzeigen (Soziale Netzewerke, Videos)">
+              <p class="drop-down-body">
+                Inhalte von sozialen Netzwerken und eingebettete Inhalte von Drittanbietern können angezeigt werden.
+              </p>
+            </app-titled-drop-down>
+            <app-titled-drop-down title="Verwendung der netID">
+              <p class="drop-down-body">
+                Wenn Sie die gesonderte Einwilligung in die Verwendung der NetID erteilt haben, verabeiten wir die NetID für die oben angegebenen Zwecke „Personalisierte Anzeigen und Inhalte, Anzeigen und Inhaltsmessungen, Erkenntnisse über Zielgruppen und Produktentwicklungen“.
+              </p>
+            </app-titled-drop-down>
+
+            <button class="my-button accept-button" (click)="acceptAll()">Alle akzeptieren</button>
             <p class="gray"> Details dazu finden Sie im Privacy Center</p>
           </div>
         </ion-col>

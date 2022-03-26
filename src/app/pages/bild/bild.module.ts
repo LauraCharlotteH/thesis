@@ -8,6 +8,7 @@ import { BildPageRoutingModule } from './bild-routing.module';
 
 import { BildPage } from './bild.page';
 import {PopUpComponent} from './pop-up/pop-up.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import {PopUpComponent} from './pop-up/pop-up.component';
     IonicModule,
     BildPageRoutingModule
   ],
-  declarations: [BildPage, PopUpComponent]
+  declarations: [BildPage, PopUpComponent, TitledDropDownComponent]
 })
 export class BildPageModule {}
