@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { SpiegelPageRoutingModule } from './spiegel-routing.module';
 
 import { SpiegelPage } from './spiegel.page';
+import {PopUpComponent} from './pop-up/pop-up.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { SpiegelPage } from './spiegel.page';
     IonicModule,
     SpiegelPageRoutingModule
   ],
-  declarations: [SpiegelPage]
+  declarations: [SpiegelPage, PopUpComponent, TitledDropDownComponent]
 })
 export class SpiegelPageModule {}
