@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { GmxPageRoutingModule } from './gmx-routing.module';
 
 import { GmxPage } from './gmx.page';
+import {PopUpComponent} from './pop-up/pop-up.component';
+import {AdjustComponent} from './adjust/adjust.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { GmxPage } from './gmx.page';
     IonicModule,
     GmxPageRoutingModule
   ],
-  declarations: [GmxPage]
+  declarations: [GmxPage, PopUpComponent, AdjustComponent]
 })
 export class GmxPageModule {}

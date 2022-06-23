@@ -35,6 +35,13 @@ ion-header {
   margin-bottom: 5px;
   transparency: 50%;
 }
+.gmx-modal{
+  --width: 780px;
+  --height: 810px;
+  --border-radius: 4px;
+  padding: 30px 30px 20px;
+}
+
 .spiegel-modal{
   --width: 658px;
   --height: 758.55px;
