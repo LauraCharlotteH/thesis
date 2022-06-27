@@ -13,7 +13,6 @@ export class GmxPage implements OnInit {
   }
 
   async ngOnInit() {
-    console.log('creating gmx modal...');
     const modal = await this.modalCtrl.create({
       component: PopUpComponent,
       backdropDismiss: false,
