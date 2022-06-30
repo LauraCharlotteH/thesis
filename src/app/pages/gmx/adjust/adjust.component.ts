@@ -3,7 +3,7 @@ import {ScoreCardService} from '../../../services/score-card/score-card.service'
 import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ICookieScore} from '../../../interfaces/interfaces';
-import {FurtherInfoComponent} from "../further-info/further-info.component";
+import {FurtherInfoComponent} from '../further-info/further-info.component';
 
 @Component({
   selector: 'app-adjust',

@@ -1,0 +1,142 @@
+.header {
+  margin: 30px 30px 0px;
+}
+
+.publisher-logo {
+  height: 40px;
+  display: block;
+  text-align: center;
+  background: url(https://img.ui-portal.de/cd/ci/web.de/brand-logo-m.svg) no-repeat 0 0;
+  background-size: auto;
+  width: 40px;
+  background-size: 40px 40px;
+}
+
+.middle{
+  overflow: scroll;
+  position: relative;
+  margin: 0px 30px;
+}
+
+
+h1 {
+  color: rgb(82, 82, 82);
+  display: inline-block;
+  --font-family: WebdeSansMedium, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 10px
+}
+
+h2 {
+  color: rgb(81, 81, 81);
+  --font-family: WebdeSansMedium, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 12px 0px 4px;
+}
+
+p {
+  color: rgb(81, 81, 81);
+  --font-family: WebdeSansMedium, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 4px 0px;
+}
+
+a {
+  color: rgb(34, 105, 195);
+}
+
+//List with checks styling
+.listing{
+  border-bottom-color: rgb(194, 194, 194);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+ion-checkbox{
+  margin-top: 25px;
+  align-self: start;
+  --border-color: rgb(28, 138, 217);
+  --background-checked: white;
+  --border-width: 1px;
+  --checkmark-color: rgb(28, 138, 217);
+}
+
+ion-item{
+  --background-hover: white;
+  --ripple-color: white;
+  --color-deactivated: rgb(81, 81, 81);
+}
+ion-label {
+  opacity: 1 !important;
+}
+
+.new-section {
+  margin: 20px 0px 4px;
+}
+
+
+//Footer styling
+.footer{
+  margin: 0px 30px 20px;
+  border-top-color: rgb(194, 194, 194);
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  --font-family: WebdeSansMedium, sans-serif;
+  font-size: 16px;
+  line-height: 22.4px;
+  padding: 20px 0px 4px;
+
+  height: 112px;
+  bottom: 0px;
+  vertical-align: bottom;
+}
+
+.footer-link{
+  padding: 0 5px;
+  color: #2269c3;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.center{
+  text-align: center;
+}
+
+button{
+  --font-family: RobotoMedium, sans-serif;
+  font-size: 16px;
+  line-height: 22.4px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  padding: 8px 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+button.accept {
+  background-color: #ffd800;
+  border-color: #ffd800;
+}
+
+button.accept:hover{
+  background-color: #ccad00;
+  border-color: #ccad00;
+}
+
+button.adjust{
+  background-color: white;
+  border-color: rgb(153, 153, 153);
+  color: rgb(153, 153, 153);
+}
+
+button.adjust:hover{
+  background-color: rgb(153, 153, 153);
+  color: white;
+}

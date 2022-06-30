@@ -1,3 +1,76 @@
-<p>
-  adjust works!
-</p>
+<div class="header">
+  <span class="publisher-logo"></span>
+</div>
+<div class="middle">
+  <h1>Ihre Privatsphäre ist uns wichtig!</h1>
+  <p>
+    Um Ihnen diesen Dienst kostenfrei anbieten zu können, finanzieren wir uns u. a. durch Werbeeinblendungen und richten werbliche und nicht-werbliche Inhalte (z. B. Newsletter) auf Ihre Interessen aus. Dafür arbeiten wir mit ausgewählten Partnern zusammen. Ihre Einstellungen können Sie jederzeit mit Klick auf Datenschutz im unteren Bereich unserer Webseite anpassen. Ausführlichere Informationen zu den folgend aufgeführten Verarbeitungszwecken finden Sie hier.
+  </p>
+  <p class="new-section"><a (click)="toggleAll()">ALLE (DE-)AKTIVIEREN</a></p> <!-- TODO Style this-->
+  <h2>Wir, die 1&1 Mail & Media GmbH, benötigen Ihre Zustimmung für die folgenden Verarbeitungszwecke:</h2>
+  <ion-list class="checklist">
+    <ion-item *ngFor="let checkbox of firstCheckboxes">
+      <ion-label class="ion-text-wrap">
+        <h2>{{checkbox.value}}</h2>
+        <p>{{checkbox.explanation}}</p>
+      </ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="checkbox.isItemChecked" (ionChange)="verifyEvent()">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <h2>Unsere Partner benötigen Ihre Zustimmung für die folgenden Verarbeitungszwecke:</h2>
+  <ion-list class="checklist">
+    <ion-item *ngFor="let checkbox of secondCheckboxes">
+      <ion-label class="ion-text-wrap">
+        <h2>{{checkbox.value}}</h2>
+        <p>{{checkbox.explanation}}</p>
+      </ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="checkbox.isItemChecked" (ionChange)="verifyEvent()">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <h2>Für manche der oben aufgeführten Verarbeitungen nutzen wir und unsere Partner</h2>
+  <ion-list class="checklist">
+    <ion-item *ngFor="let checkbox of thirdCheckboxes">
+      <ion-label class="ion-text-wrap">
+        <h2>{{checkbox.value}}</h2>
+        <p>{{checkbox.explanation}}</p>
+      </ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="checkbox.isItemChecked" (ionChange)="verifyEvent()">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <h2>Die folgenden Verarbeitungen sind für die Erbringung unserer Dienstleistungen erforderlich.</h2>
+  <ion-list class="checklist">
+    <ion-item *ngFor="let checkbox of forthCheckboxes">
+      <ion-label class="ion-text-wrap">
+        <h2>{{checkbox.value}}</h2>
+        <p>{{checkbox.explanation}}</p>
+      </ion-label>
+      <ion-checkbox slot="start" checked="true" disabled="true">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <p class="new-section"><a (click)="toggleAll()">ALLE (DE-)AKTIVIEREN</a></p> <!-- TODO Style this-->
+  <p class="new-section">
+    <a (click)="gotoFurtherInfo()">Weiterführende Informationen zum Datenschutz</a>
+  </p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <ion-toolbar>
+    <button class="adjust" (click)="acceptSelection()">Auswahl bestätigen und weiter</button>
+    <button class="accept" slot="end" (click)="acceptAll()">Alle auswählen und weiter</button>
+  </ion-toolbar>
+  <!--Impressum -->
+  <div class="center">
+    <a href="https://agb-server.gmx.net/datenschutz" target="_blank" class="footer-link">
+      Datenschutzhinweise
+    </a>
+    <a href="https://www.gmx.net/impressum/" target="_blank" class="footer-link">
+      Impressum
+    </a>
+  </div>
+</div>
+

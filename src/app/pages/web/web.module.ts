@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { WebPageRoutingModule } from './web-routing.module';
 
 import { WebPage } from './web.page';
+import {PopUpComponent} from './pop-up/pop-up.component';
+import {AdjustComponent} from './adjust/adjust.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
+import {FurtherInfoComponent} from './further-info/further-info.component';
 
 @NgModule({
   imports: [
@@ -15,6 +19,6 @@ import { WebPage } from './web.page';
     IonicModule,
     WebPageRoutingModule
   ],
-  declarations: [WebPage]
+  declarations: [WebPage, PopUpComponent, AdjustComponent, FurtherInfoComponent, TitledDropDownComponent]
 })
 export class WebPageModule {}

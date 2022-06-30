@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-further-info',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FurtherInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected modalCtrl: ModalController) { }
 
   ngOnInit() {}
+
+  async goBack(){
+    await this.modalCtrl.dismiss();
+  }
 
 }
