@@ -54,6 +54,19 @@ a {
 ion-checkbox{
   margin-top: 25px;
   align-self: start;
+  --border-color: rgb(28, 138, 217);
+  --background-checked: white;
+  --border-width: 1px;
+  --checkmark-color: rgb(28, 138, 217);
+}
+
+ion-item{
+  --background-hover: white;
+  --ripple-color: white;
+  --color-deactivated: rgb(81, 81, 81);
+}
+ion-label {
+  opacity: 1 !important;
 }
 
 .new-section {
