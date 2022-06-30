@@ -4,6 +4,7 @@ import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ICookieScore} from '../../../interfaces/interfaces';
 import {AdjustComponent} from '../adjust/adjust.component';
+import {FurtherInfoComponent} from "../further-info/further-info.component";
 
 @Component({
   selector: 'app-pop-up',
@@ -47,6 +48,22 @@ export class PopUpComponent implements OnInit {
       }
     });
     await this.modalCtrl.dismiss();
+    return await modal.present();
+  }
+
+  async gotoFurtherInfo(){
+    const modal = await this.modalCtrl.create({
+      component: FurtherInfoComponent,
+      backdropDismiss: false,
+      componentProps: {
+        name: 'cluster is XXX'
+      },
+      cssClass: 'gmx-modal'
+    });
+
+    modal.onDidDismiss().then(async (data: any) => {
+      console.log('dismissed further info');
+    });
     return await modal.present();
   }
 }

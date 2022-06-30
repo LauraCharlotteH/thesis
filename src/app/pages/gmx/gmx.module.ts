@@ -9,6 +9,8 @@ import { GmxPageRoutingModule } from './gmx-routing.module';
 import { GmxPage } from './gmx.page';
 import {PopUpComponent} from './pop-up/pop-up.component';
 import {AdjustComponent} from './adjust/adjust.component';
+import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
+import {FurtherInfoComponent} from './further-info/further-info.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,6 @@ import {AdjustComponent} from './adjust/adjust.component';
     IonicModule,
     GmxPageRoutingModule
   ],
-  declarations: [GmxPage, PopUpComponent, AdjustComponent]
+  declarations: [GmxPage, PopUpComponent, AdjustComponent, FurtherInfoComponent, TitledDropDownComponent]
 })
 export class GmxPageModule {}

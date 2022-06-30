@@ -3,6 +3,7 @@ import {ScoreCardService} from '../../../services/score-card/score-card.service'
 import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ICookieScore} from '../../../interfaces/interfaces';
+import {FurtherInfoComponent} from "../further-info/further-info.component";
 
 @Component({
   selector: 'app-adjust',
@@ -218,6 +219,22 @@ export class AdjustComponent implements OnInit {
     console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/web');
+  }
+
+  async gotoFurtherInfo(){
+    const modal = await this.modalCtrl.create({
+      component: FurtherInfoComponent,
+      backdropDismiss: false,
+      componentProps: {
+        name: 'cluster is XXX'
+      },
+      cssClass: 'gmx-modal'
+    });
+
+    modal.onDidDismiss().then(async (data: any) => {
+      console.log('dismissed further info');
+    });
+    return await modal.present();
   }
 
 }
