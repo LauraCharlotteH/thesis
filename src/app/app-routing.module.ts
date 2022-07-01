@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'ebay',
     loadChildren: () => import('./pages/ebay/ebay.module').then( m => m.EbayPageModule)
   },
+  {
+    path: 'final',
+    loadChildren: () => import('./pages/final/final.module').then( m => m.FinalPageModule)
+  },
 ];
 
 @NgModule({
