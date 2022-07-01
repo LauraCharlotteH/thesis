@@ -33,7 +33,6 @@ export class PopUpComponent implements OnInit {
   }
 
   async adjust() {
-    this.modalCtrl.dismiss();
     const modal = await this.modalCtrl.create({
       component: AdjustComponent,
       backdropDismiss: false,
@@ -53,6 +52,7 @@ export class PopUpComponent implements OnInit {
       }
     });
     return await modal.present();
+    await this.modalCtrl.dismiss();
   }
 
   rejectAll() {

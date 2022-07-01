@@ -47,7 +47,33 @@ section{
   margin-top: 32px;
   border-top: 1px solid #eee;
 }
+.noTopAnything{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.list{
+  padding-bottom: 0px;
+}
 
+.smallText{
+  font-size: 13px;
+  font-stretch: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 10px 0px;
+}
+ion-item{
+  --padding-start: 0px;
+}
+.label{
+  --color: #666;
+}
+.explanation{
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+//Buttons
 #up{
   --background: white;
   --color: black;
@@ -62,8 +88,17 @@ section{
 }
 ion-icon{
   font-size: 2em;
-  --ionicon-stroke-width: 50px;
 }
-.label{
-  --color: #666;
+
+#onwards{
+  background-color: rgb(54, 101, 243);
+  color: white;
+  box-shadow: none;
+  border-radius: 48px;
+  font-weight: 400;
+  padding: 0 30px;
+  line-height: 32px;
+  margin-left: 16px;
+  cursor: pointer;
+  font-size: 14px;
 }

@@ -55,20 +55,146 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3>Framework Partner</h3>
-        <ion-item>
+      <h3>Framework Partner</h3>
+      <section class="list" *ngFor="let zweck of zwecke">
+        <ion-item lines="none">
           <h3>
-            Zweck 1: Informationen auf einem Gerät speichern und/oder abrufen
+            {{zweck.label}}
           </h3>
-          <ion-label *ngIf="zwecke[0]" class="label" slot="end">Ja</ion-label>
-          <ion-label *ngIf="!zwecke[0]" class="label" slot="end">Nein</ion-label>
-          <ion-toggle slot="end" [(ngModel)]="zwecke[0]">
-
-          </ion-toggle>
+          <ion-label *ngIf="zweck.selected" class="label" slot="end">Ja</ion-label>
+          <ion-label *ngIf="!zweck.selected" class="label" slot="end">Nein</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="zweck.selected"></ion-toggle>
         </ion-item>
+        <p class="explanation">
+          <strong>Was bedeutet das?</strong> {{zweck.explanation}}</p>
       </section>
-      <ion-button (click)="log()">log zwecke</ion-button>
+      <section class="noTopAnything">
+        <p class="smallText">Bitte beachten Sie: Ihre Opt-out-Möglichkeiten sind auf die oben genannten Zwecke
+          beschränkt und gelten nicht für die unten aufgeführten besonderen Zwecke.</p>
+        <h1>Besondere Zwecke:</h1>
+        <ul>
+          <li>
+            <p class="smallText">
+              <strong>Besonderer Zweck 1: Sicherheit gewährleisten, Betrug verhindern und Fehler beheben
+                <br>Was bedeutet das?</strong>
+              <br>Zur Gewährleistung von Sicherheit, Verhinderung von Betrug und Behebung von Fehlern können Anbieter:
+              <br>* sicherstellen, dass Daten sicher übermittelt werden;
+              <br>* schädliche, betrügerische, ungültige oder illegale Aktivitäten ausfindig machen und verhindern;
+              <br>* den korrekten und effizienten Betrieb von Systemen und Prozessen - einschließlich der Überwachung
+              und Verbesserung der Leistung von Systemen und Prozessen - im Rahmen der erlaubten Verarbeitungszwecke
+              sicherstellen.
+              <br>Anbieter können nicht:
+              <br>* Datenverarbeitungen durchführen, die in einem der anderen Verarbeitungszwecke definiert sind.
+              <br>Hinweis: Daten, die gesammelt und verwendet werden, um die Sicherheit zu gewährleisten, Betrug zu
+              verhindern und Fehler zu beseitigen.
+              <br>können automatisch gesendete Geräteeigenschaften zur Identifizierung beinhalten, präzise
+              Geolokalisierungsdaten und Daten, die durch aktive Abtastung der Vorrichtung erhalten werden. Merkmale zur
+              Identifizierung ohne gesonderte Offenlegung und/oder Opt-in.
+              <br>Hinweis: Die Daten, die zur Gewährleistung der Sicherheit, zur Verhinderung von Betrug und zur
+              Fehlersuche und -behebung erhoben und verwendet werden, können automatisch gesendete Gerätemerkmale zur
+              Identifizierung, präzise Geolokalisierungsdaten und Daten enthalten, die durch aktives Scannen von
+              Gerätemerkmalen zur Identifizierung ohne separate Offenlegung und/oder Opt-in erhalten werden.
+            </p>
+          </li>
+          <li>
+            <p class="smallText">
+              <strong>Besonderer Zweck 2: Anzeigen oder Inhalte technisch bereitstellen
+                <br>Was bedeutet das?</strong>
+              <br>Zur Bereitstellung von Informationsdaten und um auf technische Anfragen zu reagieren können Anbieter:
+              <br>* die IP-Adresse eines Benutzers verwenden, um über das Internet eine Anzeige einzublenden;
+              <br>* auf die Interaktion eines Benutzers mit einer Anzeige reagieren, indem sie den Benutzer zu einer
+              Zielseite weiterleiten;
+              <br>* die IP-Adresse eines Benutzers verwenden, um Inhalte über das Internet bereitzustellen;
+              <br>* auf die Interaktion eines Benutzers mit Inhalten reagieren, indem sie den Benutzer zu einer
+              Zielseite weiterleiten;
+              <br>* Informationen zum Gerätetyp und seinen Möglichkeiten zur Darstellung von Anzeigen oder Inhalten
+              verwenden, z. B. um Werbemittel oder Videodateien in der richtigen Größe und in einem vom Gerät
+              unterstützten Format bereitzustellen.
+              <br>
+              <br>Anbieter können nicht:
+              <br>* Datenverarbeitungen durchführen, die in einem der anderen Verarbeitungszwecke definiert sind.
+            </p>
+          </li>
+        </ul>
+        <h1>Merkmale:</h1>
+        <ul>
+          <li>
+            <p class="smallText">
+              <strong>Funktion 1: Mit Offline-Datenquellen zusammenführen:</strong> Anbieter können:
+              <br>
+              * Daten, die offline erhoben wurden, mit Daten, die online erhoben wurden, zusammenführen, um sie für
+              einen oder mehrere Verarbeitungszwecke oder besondere Verarbeitungszwecke ergänzend zu nutzen.
+            </p>
+          </li>
+          <li>
+            <p class="smallText">
+              <strong>Funktion 2: Verschiedene Geräte verknüpfen:</strong> Anbieter können:
+              <br>* deterministisch ermitteln, dass zwei oder mehr Geräte zum gleichen Benutzer oder Haushalt gehören;
+              <br>* probabilistisch ermitteln, dass zwei oder mehr Geräte zum gleichen Benutzer oder Haushalt gehören;
+              <br>* Geräteeigenschaften zur probabilistischen Identifikation aktiv abfragen, wenn Nutzer Anbietern die
+              aktive Abfrage von Geräteeigenschaften erlaubt haben. (Besondere Verarbeitungsmöglichkeit 2).
+            </p>
+          </li>
+          <li>
+            <p class="smallText">
+              <strong>Funktion 3: Empfangen und Verwenden automatisch gesendeter Geräteeigenschaften für die
+                Identifikation: </strong>Anbieter können:
+              <br>* eine Kennung unter Verwendung automatisch übertragener Geräteeigenschaften wie z.B. IP-Adresse oder
+              Browser-Kennung.
+              <br>* Eine solche Kennung benutzen, um zu versuchen, ein Gerät wiederzuerkennen
+              <br>Anbieter dürfen nicht:
+              <br>* aus Daten, die aus der aktiven Abfrage bestimmter Eigenschaften eines Geräts - z. B. der
+              installierten Schriftarten oder der Bildschirmauflösung - gewonnen wurden, eine Kennung erstellen;
+              <br>* eine solche Kennung verwenden, um ein Gerät erneut zu identifizieren.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <h3>Nicht-Framework-Partner</h3>
+      <p class="smallText">Bei den folgenden Partnern müssen Sie die Erfassungs- und Nutzungseinstellungen für Ihre
+        Daten direkt beim jeweiligen Partner festlegen. Wenn Sie möchten, dass wir im Hinblick auf die für jeden Partner
+        beschriebenen Zwecke keine Informationen an die folgenden Partner weitergeben, geben Sie dies an, indem Sie alle
+        Schalter im Abschnitt „Framework-Partner“ auf „Nein“ stellen.</p>
+      <section>
+        <h3>Facebook</h3>
+        <p class="smallText">
+          Wir können Informationen darüber, wie Sie eBay nutzen, und bestimmte personenbezogene Daten von Ihnen
+          verwenden und über Facebook-Pixel bzw. durch Senden der Daten direkt über unsere Server an Facebook
+          weitergeben. So können wir Werbung auf den Plattformen von Facebook auf Sie zuschneiden und messen sowie
+          Inhalte auswählen, bereitstellen und auswerten. Mehr dazu, wie Facebook Ihre personenbezogenen Daten
+          verarbeitet, erfahren Sie unter https://www.facebook.com/about/privacy. Weitere Informationen zur
+          Datenweitergabe an Facebook durch uns finden Sie in unserer Cookie-Erklärung.
+        </p>
+      </section>
+      <section>
+        <h3>Microsoft Bing</h3>
+        <p class="smallText">
+          Wir können Informationen darüber, wie Sie eBay nutzen, und bestimmte personenbezogene Daten von Ihnen
+          verwenden und über Microsoft-Pixel oder andere Technologie bzw. Offline-Conversion-Uploads an Microsoft
+          weitergeben. So können wir Werbung auf Sie zuschneiden und messen sowie Inhalte auswählen, bereitstellen und
+          auswerten. Weitere Informationen zur Verarbeitung Ihrer personenbezogenen Daten durch Microsoft finden Sie
+          unter https://privacy.microsoft.com/en-US/privacystatement.
+        </p>
+      </section>
+      <section>
+        <h3>eBay Partner Network-Publisher</h3>
+        <p class="smallText">
+          Wir können Nutzungsdaten verwenden, um Zielgruppensegmente zu erstellen, und diese Segmente (einschließlich
+          der anonymisierten eindeutigen Nutzer-IDs für das entsprechende Segment) an unsere eBay Partner
+          Network-Publisher („ePN-Partner“) weitergeben, um die Werbung für Sie auf den Websites unserer ePN-Partner zu
+          personalisieren. Ein Zielgruppensegment kann beispielsweise aus neuen Nutzern bestehen, die noch keine
+          Einkäufe bei eBay getätigt haben. Wir geben keine direkt identifizierbaren personenbezogenen Daten an unsere
+          ePN-Partner weiter.
+        </p>
+        <p class="smallText">
+          eBay nimmt am IAB Europe Transparency & Consent Framework teil, hält die entsprechenden Bestimmungen und
+          Grundsätze ein und betreibt diese Plattform für die Zustimmungsverwaltung mit der Identifikationsnummer 125.
+        </p>
+      </section>
+      <ion-toolbar>
+        <button id="onwards" (click)="acceptSelection()" slot="end">Weiter</button>
+      </ion-toolbar>
+
     </div>
   </div>
 
