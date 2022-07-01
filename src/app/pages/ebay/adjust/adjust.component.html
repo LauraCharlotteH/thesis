@@ -1,5 +1,7 @@
 <ion-content>
-  <ion-button id="up" slots="icon-only" (click)="scrollUp()"><ion-icon name="chevron-up-outline" strong="true"></ion-icon></ion-button>
+  <ion-button id="up" slots="icon-only" (click)="scrollUp()">
+    <ion-icon name="chevron-up-outline" strong="true"></ion-icon>
+  </ion-button>
   <div id="wrapper">
     <img src="assets/page-backgrounds/ebay-adjust-header.png">
     <div id="mainContent">
@@ -55,8 +57,18 @@
       </section>
       <section>
         <h3>Framework Partner</h3>
-      </section>
+        <ion-item>
+          <h3>
+            Zweck 1: Informationen auf einem Gerät speichern und/oder abrufen
+          </h3>
+          <ion-label *ngIf="zwecke[0]" class="label" slot="end">Ja</ion-label>
+          <ion-label *ngIf="!zwecke[0]" class="label" slot="end">Nein</ion-label>
+          <ion-toggle slot="end" [(ngModel)]="zwecke[0]">
 
+          </ion-toggle>
+        </ion-item>
+      </section>
+      <ion-button (click)="log()">log zwecke</ion-button>
     </div>
   </div>
 

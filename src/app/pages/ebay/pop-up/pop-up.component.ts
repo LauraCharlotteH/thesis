@@ -44,8 +44,11 @@ export class PopUpComponent implements OnInit {
     });
 
     modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
+      if (data.data === 'accept all') {
+        console.log('Accept all!');
+        this.accept(); //noof Max cookies is stored in accept
+      }else{
+        //accepting the given number of cookies
         this.accept(data.data);
       }
     });

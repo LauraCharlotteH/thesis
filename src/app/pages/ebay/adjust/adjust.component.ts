@@ -9,12 +9,21 @@ import {IonContent} from '@ionic/angular';
 export class AdjustComponent implements OnInit {
   @ViewChild(IonContent) content: IonContent;
 
+  zwecke = [
+    false, false, false, false,false, false,false, false,false, false,
+  ];
+
   constructor() { }
 
   ngOnInit() {}
 
   scrollUp(){
     this.content.scrollToTop(300);
+  }
+
+  //todo remove!
+  log(){
+    console.log('Zwecke is: ' + this.zwecke);
   }
 
 }
