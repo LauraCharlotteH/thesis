@@ -11,6 +11,7 @@ import {PopUpComponent} from './pop-up/pop-up.component';
 import {AdjustComponent} from './adjust/adjust.component';
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 import {FurtherInfoComponent} from './further-info/further-info.component';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import {FurtherInfoComponent} from './further-info/further-info.component';
     IonicModule,
     GmxPageRoutingModule
   ],
-  declarations: [GmxPage, PopUpComponent, AdjustComponent, FurtherInfoComponent, TitledDropDownComponent]
+  declarations: [GmxPage, PopUpComponent, AdjustComponent, FurtherInfoComponent, TitledDropDownComponent, HeaderInfoComponent]
 })
 export class GmxPageModule {}

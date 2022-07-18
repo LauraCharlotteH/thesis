@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { BeforeCookiesPage } from './before-cookies.page';
+import { HeaderInfoComponent } from './header-info.component';
 
-describe('BeforeCookiesPage', () => {
-  let component: BeforeCookiesPage;
-  let fixture: ComponentFixture<BeforeCookiesPage>;
+describe('HeaderInfoComponent', () => {
+  let component: HeaderInfoComponent;
+  let fixture: ComponentFixture<HeaderInfoComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BeforeCookiesPage ],
+      declarations: [ HeaderInfoComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BeforeCookiesPage);
+    fixture = TestBed.createComponent(HeaderInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

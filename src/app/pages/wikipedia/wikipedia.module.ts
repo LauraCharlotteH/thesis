@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WikipediaPageRoutingModule } from './wikipedia-routing.module';
 
 import { WikipediaPage } from './wikipedia.page';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { WikipediaPage } from './wikipedia.page';
     IonicModule,
     WikipediaPageRoutingModule
   ],
-  declarations: [WikipediaPage]
+  declarations: [WikipediaPage, HeaderInfoComponent]
 })
 export class WikipediaPageModule {}

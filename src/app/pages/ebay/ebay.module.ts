@@ -9,6 +9,7 @@ import { EbayPageRoutingModule } from './ebay-routing.module';
 import { EbayPage } from './ebay.page';
 import {AdjustComponent} from './adjust/adjust.component';
 import {PopUpComponent} from './pop-up/pop-up.component';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import {PopUpComponent} from './pop-up/pop-up.component';
     IonicModule,
     EbayPageRoutingModule
   ],
-  declarations: [EbayPage, AdjustComponent, PopUpComponent]
+  declarations: [EbayPage, AdjustComponent, PopUpComponent, HeaderInfoComponent]
 })
 export class EbayPageModule {}

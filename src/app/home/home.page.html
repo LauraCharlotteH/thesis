@@ -1,11 +1,27 @@
 <ion-header>
+  <app-header-info></app-header-info>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <div id="container">
-    <strong>Ready to play?</strong>
-    <p>Start by taking the OPLIS quizz!</p>
-    <ion-button [routerLink]="['/oplis']">Let's Go!</ion-button>
+  <div id="center">
+    <div id="container">
+      <strong>Sie befinden sich nun auf der Seite des Prototypen!</strong>
+      <p>Bitte wählen Sie jetzt aus welcher Gruppe Sie zugeteilt wurden.<br> Sie finden diese Information auf der Seite des
+        Fragebogens.</p>
+
+      <ion-item>
+        <ion-select interface="popover" placeholder="Gruppenwahl" (ionChange)="selectionChange($event)">
+          <ion-select-option value="ppa">A</ion-select-option>
+          <ion-select-option value="pa">B</ion-select-option>
+          <ion-select-option value="cg">C</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <p>Danke!</p>
+      <p>Sie werden nun durch einen weiteren Fragebogen geleitet. Bitte antworten sie einfach nach bestem Wissen. <br> Wenn
+        Sie eine Antwort nicht wissen ist das nicht schlimm. Wählen Sie dann einfach "weiß ich nicht" aus.</p>
+      <ion-button [routerLink]="['/oplis']">Weiter</ion-button>
+    </div>
   </div>
 </ion-content>

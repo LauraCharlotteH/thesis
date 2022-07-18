@@ -30,6 +30,12 @@ export enum Cluster {
   high = 'HIGH'
 }
 
+export enum ParticipantGroup {
+  personalisedpa = 'A',
+  pa = 'B',
+  controlGroup = 'C'
+}
+
 export enum ActiveStatus {
   act = 'ACTIVE',
   notact= 'NOTACTIVE',

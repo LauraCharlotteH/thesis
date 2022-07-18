@@ -11,6 +11,7 @@ import {PopUpComponent} from './modal/pop-up/pop-up.component';
 import {AdjustSettingsComponent} from './modal/adjust-settings/adjust-settings.component';
 import {DropDownComponent} from '../../components/drop-down/drop-down.component';
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
     imports: [
@@ -27,7 +28,7 @@ import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-
         PopUpComponent,
         AdjustSettingsComponent,
         DropDownComponent,
-        TitledDropDownComponent
+        TitledDropDownComponent, HeaderInfoComponent
     ]
 })
 export class GooglePageModule {}

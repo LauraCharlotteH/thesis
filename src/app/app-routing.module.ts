@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/oplis/oplis.module').then( m => m.OPLISPageModule)
   },
   {
-    path: 'before-cookies',
-    loadChildren: () => import('./pages/before-cookies/before-cookies.module').then( m => m.BeforeCookiesPageModule)
-  },
-  {
     path: 'google',
     loadChildren: () => import('./pages/google/google.module').then( m => m.GooglePageModule)
   },

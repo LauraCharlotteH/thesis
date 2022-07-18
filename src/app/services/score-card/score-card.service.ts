@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import {Cluster, ICookieScore, IOplisResult} from '../../interfaces/interfaces';
+import {Cluster, ICookieScore, IOplisResult, ParticipantGroup} from '../../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScoreCardService {
-  result: IOplisResult;
-  cookies: ICookieScore[] = new Array();
-  cluster: Cluster;
+  private result: IOplisResult;
+  private cookies: ICookieScore[] = new Array();
+  private cluster: Cluster;
+  private group: ParticipantGroup;
 
   constructor() { }
 
@@ -18,6 +19,22 @@ export class ScoreCardService {
 
   getResult(){
     return this.result;
+  }
+
+  setGroup(gr: ParticipantGroup){
+    this.group = gr;
+  }
+
+  getGroup(){
+    return this.group;
+  }
+
+  setCluster(clus: Cluster){
+    this.cluster =clus;
+  }
+
+  getCluster(){
+    return this.cluster;
   }
 
   setCookies(cookies: ICookieScore){

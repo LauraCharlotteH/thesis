@@ -9,6 +9,7 @@ import { FacebookPageRoutingModule } from './facebook-routing.module';
 import { FacebookPage } from './facebook.page';
 import {PopUpComponent} from './pop-up/pop-up.component';
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-
     IonicModule,
     FacebookPageRoutingModule
   ],
-  declarations: [FacebookPage, PopUpComponent, TitledDropDownComponent]
+  declarations: [FacebookPage, PopUpComponent, TitledDropDownComponent, HeaderInfoComponent]
 })
 export class FacebookPageModule {}

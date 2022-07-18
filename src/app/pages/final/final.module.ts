@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FinalPageRoutingModule } from './final-routing.module';
 
 import { FinalPage } from './final.page';
+import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { FinalPage } from './final.page';
     IonicModule,
     FinalPageRoutingModule
   ],
-  declarations: [FinalPage]
+  declarations: [FinalPage, HeaderInfoComponent]
 })
 export class FinalPageModule {}

@@ -1,4 +1,6 @@
-<ion-header></ion-header>
+<ion-header>
+  <app-header-info></app-header-info>
+</ion-header>
 
 <ion-content>
   <div class="container">
@@ -6,25 +8,35 @@
       <p class="text-center">{{ prevAnswered.length }} of {{ questions.length }}</p>
       <h1>{{ questions[currentQuestion].question }}</h1>
 
-      <div class="answers" >
-        <ul class="answers__list" *ngFor="let quiz of questions[currentQuestion].answer" >
-          <label><li class="answers__item">
-            <input  type="radio" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
-            {{ quiz.option }}
-          </li></label>
+      <div class="answers">
+        <ul class="answers__list" *ngFor="let quiz of questions[currentQuestion].answer">
+          <label>
+            <li class="answers__item">
+              <input type="radio" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
+              {{ quiz.option }}
+            </li>
+          </label>
         </ul>
       </div>
     </div>
-<!--When all questions are answered-->
+    <!--When all questions are answered-->
     <div *ngIf="prevAnswered.length > 20">
-      <button class="btn" (click)="playAgain()" >Fragebogen wiederholen</button>
       <div class="results-wrapper">
         <p>Richtige Antworten: {{ correctAnswers }} | Falsche Antworten: {{ incorrectAnswers }}</p>
         <p>OPLIS Wert: {{result.oplisScore}}</p>
         <p>Prozentrang: {{result.percentageRank}}</p>
         <h4>Cluster: {{result.cluster}}</h4>
+        <p>Sie müssen sich diese Informationen nicht merken.</p>
       </div>
-      <ion-button [routerLink]="['/before-cookies']">Next step!</ion-button>
+      <div>
+        <p>Als nächstes werden Ihnen die Cookie Popups verschiedener Webseiten angezeigt. Stellen Sie sich vor, Sie
+          würden die Webseite besuchen wollen und das Popup kommt. Wählen Sie die Cookies so wie Sie es auch in der
+          Realität tun würden. Wenn Sie Ihre Auswahl getroffen haben werden Sie automatisch zum nächten Testpopup
+          weitergeleitet.</p>
+        <p>Info: So lange Sie das petrolfarbene Banner mit dem durchgestrichenen Keks sehen befinden Sie sich auf der
+          Webseite des Prototypen und es werden keine echten Cookies gesetzt.</p>
+      </div>
+      <ion-button [routerLink]="['/google']">Weiter!</ion-button>
 
     </div>
 
