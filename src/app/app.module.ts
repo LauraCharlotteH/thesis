@@ -6,9 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {CookieConfirmComponent} from './components/cookie-confirm/cookie-confirm.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CookieConfirmComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
