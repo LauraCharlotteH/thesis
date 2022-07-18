@@ -12,6 +12,7 @@ import {AdjustSettingsComponent} from './modal/adjust-settings/adjust-settings.c
 import {DropDownComponent} from '../../components/drop-down/drop-down.component';
 import {TitledDropDownComponent} from '../../components/titled-drop-down/titled-drop-down.component';
 import {HeaderInfoComponent} from '../../components/header-info/header-info.component';
+import {CookieAssistantComponent} from '../../components/cookie-assistant/cookie-assistant.component';
 
 @NgModule({
     imports: [
@@ -28,7 +29,7 @@ import {HeaderInfoComponent} from '../../components/header-info/header-info.comp
         PopUpComponent,
         AdjustSettingsComponent,
         DropDownComponent,
-        TitledDropDownComponent, HeaderInfoComponent
+        TitledDropDownComponent, HeaderInfoComponent, CookieAssistantComponent
     ]
 })
 export class GooglePageModule {}
