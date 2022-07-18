@@ -3,7 +3,7 @@ import {ModalController} from '@ionic/angular';
 import {PopUpComponent} from './modal/pop-up/pop-up.component';
 import {ScoreCardService} from '../../services/score-card/score-card.service';
 import {ParticipantGroup} from '../../interfaces/interfaces';
-import {CookieAssistantComponent} from "../../components/cookie-assistant/cookie-assistant.component";
+import {CookieAssistantComponent} from '../../components/cookie-assistant/cookie-assistant.component';
 
 @Component({
   selector: 'app-google',
@@ -17,7 +17,7 @@ export class GooglePage implements OnInit {
   async ngOnInit() {
     switch (this.scoreCardService.getGroup()) {
       case ParticipantGroup.personalisedpa:
-        this.ppa();
+        this.pa();
         break;
       case ParticipantGroup.pa:
         this.pa();
@@ -29,8 +29,9 @@ export class GooglePage implements OnInit {
 
   }
 
-  async ppa(){}
-
+  /**
+   * The popup recognises the pa/ppa group and selects the texts accordingly
+   */
   async pa(){
     const modal = await this.modalCtrl.create({
       component: CookieAssistantComponent,
