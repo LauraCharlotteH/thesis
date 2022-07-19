@@ -24,9 +24,7 @@ export class GooglePage implements OnInit {
         break;
       case ParticipantGroup.controlGroup:
         this.cg();
-
     }
-
   }
 
   /**
