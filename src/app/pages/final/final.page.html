@@ -1,10 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>final</ion-title>
-  </ion-toolbar>
   <app-header-info></app-header-info>
 </ion-header>
 
 <ion-content>
+  <div class="container">
+    <h1>Geschafft!</h1>
+    <p>Auf der Seite des Fragebogens können Sie nun auf "weiter" klicken.</p>
+    <p>Sie werden dann aufgefordert Informationen anzugeben. Hier sind die geforderten Informationen:</p>
+    <div id="results">
+      <p><strong>Gruppe: </strong>{{group}}</p>
+      <p><strong>OPLIS Resultat: </strong>{{rawOplisScore}}</p>
+      <p><strong>Cluster: </strong>{{cluster}}</p>
+      <p><strong>Cookies: </strong>{{acceptedCookies}}</p>
+    </div>
+    <p>Wenn Sie das gemacht haben können Sie diesen Tab schließen.</p>
+
+  </div>
 
 </ion-content>

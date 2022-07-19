@@ -60,4 +60,15 @@ export class ScoreCardService {
     });
   }
 
+  /**
+   * calculate the total number of accepted cookies
+   */
+  getNumberOfAcceptedCookies(){
+    let counter = 0;
+    this.cookies.forEach( (entry) => {
+      counter += entry.acceptedCookies;
+    });
+    return counter;
+  }
+
 }
