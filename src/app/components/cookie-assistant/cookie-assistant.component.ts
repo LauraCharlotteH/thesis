@@ -4,6 +4,7 @@ import {Cluster, ParticipantGroup} from '../../interfaces/interfaces';
 import textJson from './texts.json';
 import {CookieConfirmComponent} from '../cookie-confirm/cookie-confirm.component';
 import {ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cookie-assistant',
@@ -23,7 +24,7 @@ export class CookieAssistantComponent implements OnInit {
   addInfo: string;
   allInfo: string;
 
-  constructor(public scoreCardService: ScoreCardService, public modalCtrl: ModalController) {
+  constructor(public scoreCardService: ScoreCardService, public modalCtrl: ModalController, public router: Router) {
   }
 
   /**
@@ -89,6 +90,8 @@ export class CookieAssistantComponent implements OnInit {
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
         console.log('data is: ' + data.data);
+        await this.modalCtrl.dismiss();
+        await this.router.navigateByUrl(this.nextURL);
       }
     });
     return await modal.present();

@@ -35,7 +35,7 @@ export class GooglePage implements OnInit {
       component: CookieAssistantComponent,
       backdropDismiss: false,
       componentProps: { //TODO include correct number of cookies!
-        website: 'google',
+        website: 'google.de',
         nextURL: '/youtube',
         functional: 4,
         ads: 5,
