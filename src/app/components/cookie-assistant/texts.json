@@ -1,18 +1,30 @@
 {
   "low": {
     "header": "low header - Diese Webseite möchte Cookies verwenden. Cookies sind Textdateien die die Webseite auf deinem Gerät speichert und bei Bedarf, z.B. dem nächsten Besuch auf der Webseite ausliest. Diese können verschiedene Funktionen haben.\nSie können jetzt entscheiden welche Cookies die Webseite verwenden darf.",
+    "cookie": "low cookie explain",
+    "thirdParty": "low third party explain",
     "functional": "low functional - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
+    "funcExample": "low func example",
     "adds": "low adds - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
-    "all": "low all - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,"
+    "addsExample": "low adds example",
+    "all": "low all - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
+    "allExample": "low all example"
   },
   "med": {
     "header": "med header - Diese Webseite möchte Cookies verwenden. Cookies sind Textdateien die die Webseite auf deinem Gerät speichert und bei Bedarf, z.B. dem nächsten Besuch auf der Webseite ausliest. Diese können verschiedene Funktionen haben.\nSie können jetzt entscheiden welche Cookies die Webseite verwenden darf.",
+    "cookie": "med cookie explain",
+    "thirdParty": "med third party explain",
     "functional": "med functional - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
+    "funcExample": "med func example",
     "adds": "med adds - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
-    "all": "med all - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,"
+    "addsExample": "med adds example",
+    "all": "med all - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
+    "allExample": "med all example"
   },
   "high": {
     "header": "high header - Diese Webseite möchte Cookies verwenden. Cookies sind Textdateien die die Webseite auf deinem Gerät speichert und bei Bedarf, z.B. dem nächsten Besuch auf der Webseite ausliest. Diese können verschiedene Funktionen haben.\nSie können jetzt entscheiden welche Cookies die Webseite verwenden darf.",
+    "cookie": "high cookie explain",
+    "thirdParty": "high third party explain",
     "functional": "high functional - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
     "adds": "high adds - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,",
     "all": "high all - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,"

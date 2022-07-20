@@ -5,8 +5,7 @@
     {{title}}
   </h2>
   <!-- Body of element, takes whatever is used as body/content of drop down tag -->
-  <div [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
+  <div class="body" [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
     <ng-content></ng-content>
   </div>
-
 </div>

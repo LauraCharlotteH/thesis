@@ -6,10 +6,19 @@ ion-content{
 
 //info grid
 
-ion-col:nth-child(2){
+.infoGrid ion-col:nth-child(2){
   background-color: #9ac7e6;
   margin: 4px;
   border-radius: 6px;
+}
+
+app-titled-drop-down{
+  --header-background: #9ac7e6;
+  --arrow-position: left;
+  --background: #9ac7e6;
+  --body-padding: 10px 30px;
+  --border-radius: 10px;
+  --header-border-radius: 10px;
 }
 
 

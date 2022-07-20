@@ -3,16 +3,38 @@
   <p>{{header}}</p>
   <ion-grid>
     <ion-row>
+      <ion-col>
+        <app-titled-drop-down title="Was ist ein Cookie?">
+          {{cookieExplanation}}
+        </app-titled-drop-down>
+      </ion-col>
+      <ion-col>
+        <app-titled-drop-down title="Was sind third-party Cookies?">
+          {{thirdPartyExplanation}}
+        </app-titled-drop-down>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="infoGrid">
+    <ion-row>
       <ion-col size="2">Funktionale</ion-col>
-      <ion-col>{{functionalInfo}}</ion-col>
+      <ion-col>
+        {{functionalInfo}}
+        <app-titled-drop-down *ngIf="funcExample" title="Beispiel:">{{funcExample}}</app-titled-drop-down>
+      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">Marketing</ion-col>
-      <ion-col>{{addInfo}}</ion-col>
+      <ion-col>{{addInfo}}
+        <app-titled-drop-down *ngIf="addExample" title="Beispiel:">{{addExample}}</app-titled-drop-down>
+      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">Alle</ion-col>
-      <ion-col>{{allInfo}}</ion-col>
+      <ion-col>{{allInfo}}
+        <app-titled-drop-down *ngIf="allExample" title="Beispiel:">{{allExample}}</app-titled-drop-down>
+      </ion-col>
     </ion-row>
   </ion-grid>
   <ion-toolbar>

@@ -17,12 +17,15 @@ export class CookieAssistantComponent implements OnInit {
   @Input() functional;
   @Input()ads;
   @Input()all;
-
-  parsed;
   header: string;
+  cookieExplanation: string;
+  thirdPartyExplanation: string;
   functionalInfo: string;
+  funcExample: string;
   addInfo: string;
+  addExample: string;
   allInfo: string;
+  allExample: string;
 
   constructor(public scoreCardService: ScoreCardService, public modalCtrl: ModalController, public router: Router) {
   }
@@ -56,29 +59,44 @@ export class CookieAssistantComponent implements OnInit {
   getLowTexts(){
     this.header = textJson.low.header;
     this.functionalInfo = textJson.low.functional;
+    this.funcExample = textJson.low.funcExample;
     this.addInfo = textJson.low.adds;
+    this.addExample = textJson.low.addsExample;
     this.allInfo = textJson.low.all;
+    this.allExample = textJson.low.allExample;
+    this.cookieExplanation = textJson.low.cookie;
+    this.thirdPartyExplanation= textJson.low.thirdParty;
   }
 
   getMedTexts(){
     this.header = textJson.med.header;
     this.functionalInfo = textJson.med.functional;
+    this.funcExample = textJson.med.funcExample;
     this.addInfo = textJson.med.adds;
+    this.addExample = textJson.med.addsExample;
     this.allInfo = textJson.med.all;
+    this.allExample = textJson.med.allExample;
+    this.cookieExplanation = textJson.med.cookie;
+    this.thirdPartyExplanation= textJson.med.thirdParty;
   }
 
   getHighTexts(){
     this.header = textJson.high.header;
     this.functionalInfo = textJson.high.functional;
+    //this.funcExample = textJson.high.funcExample;
     this.addInfo = textJson.high.adds;
+    //this.addExample = textJson.high.addsExample;
     this.allInfo = textJson.high.all;
+    //this.allExample = textJson.high.allExample;
+    this.cookieExplanation = textJson.high.cookie;
+    this.thirdPartyExplanation= textJson.high.thirdParty;
   }
 
   async openConfirmPopup(selection: string, noCookies: number){
     const modal = await this.modalCtrl.create({
       component: CookieConfirmComponent,
       backdropDismiss: false,
-      componentProps: { //TODO include correct number of cookies!
+      componentProps: {
         website: this.website,
         selection,
         amount: noCookies,
