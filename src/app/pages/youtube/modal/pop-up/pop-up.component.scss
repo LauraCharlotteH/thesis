@@ -11,16 +11,24 @@
   --border-radius: 2px;
   --box-shadow: none;
   --background: #065fd4;
-  text-transform: none;
   margin: 20px;
 }
 
 .accept{
-  bottom: 0px;
-  right: 0px;
+  bottom: 55px;
+  right: 10px;
 }
 
 .adjust{
-  bottom: 0px;
-  right: 160px;
+  bottom: 55px;
+  right: 360px;
+  --background: white;
+  color: #065fd4;
+  --border-color: #065fd4 ;
+  --border-width: 1px;
+}
+
+.reject{
+  bottom: 55px;
+  right: 200px;
 }
