@@ -4,7 +4,7 @@ import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {ICookieScore} from '../../../interfaces/interfaces';
 import {AdjustComponent} from '../adjust/adjust.component';
-import {FurtherInfoComponent} from "../further-info/further-info.component";
+import {FurtherInfoComponent} from '../further-info/further-info.component';
 
 @Component({
   selector: 'app-pop-up',
@@ -20,11 +20,10 @@ export class PopUpComponent implements OnInit {
   }
 
   acceptAll() {
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'gmx.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 90,
+      acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActiveStatus, ICookieScore} from '../../../../interfaces/interfaces';
-import {ModalController} from "@ionic/angular";
-import {Router} from "@angular/router";
-import {ScoreCardService} from "../../../../services/score-card/score-card.service";
+import {ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
+import {ScoreCardService} from '../../../../services/score-card/score-card.service';
 
 
 @Component({
@@ -25,11 +25,20 @@ export class AdjustSettingsComponent implements OnInit {
   }
 
   confirm(){
-    //TODO how many cookies?
+    let acceptedCookies = 3;
+    if(this.selectedCookies.suchanpassung === ActiveStatus.act){
+      acceptedCookies ++;
+    }
+    if(this.selectedCookies.youtubeverlauf === ActiveStatus.act){
+      acceptedCookies ++;
+    }
+    if(this.selectedCookies.personalisierteWerbung === ActiveStatus.act){
+      acceptedCookies ++;
+    }
     const cookies: ICookieScore = {
-      website: 'youtube.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      website: 'google.de',
+      noOfCookies: 6,
+      acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

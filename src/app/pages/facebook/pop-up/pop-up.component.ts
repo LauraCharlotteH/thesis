@@ -16,11 +16,11 @@ export class PopUpComponent implements OnInit {
   ngOnInit() {}
 
   allowSome(){
-    //TODO how many cookies?
+    //functional only
     const cookies: ICookieScore = {
       website: 'facebook.com',
-      noOfCookies: 100,
-      acceptedCookies: 50
+      noOfCookies: 8,
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
@@ -29,11 +29,10 @@ export class PopUpComponent implements OnInit {
   }
 
   allowAll(){
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'facebook.com',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 8,
+      acceptedCookies: 8
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

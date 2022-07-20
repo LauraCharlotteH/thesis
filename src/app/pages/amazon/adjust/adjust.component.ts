@@ -23,11 +23,10 @@ export class AdjustComponent implements OnInit {
   ngOnInit() {}
 
   acceptAll(){
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'amazon.com',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 6,
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
@@ -36,11 +35,21 @@ export class AdjustComponent implements OnInit {
   }
 
   async acceptSettings(){
-    //TODO how many cookies?
+    let acceptedCookies = 4; //functional cookies always active
+    if (this.selectedCookies.adds === ActiveStatus.act){
+      acceptedCookies = 6; //all cookies
+    }else{
+      if(this.selectedCookies.amazonAdds === ActiveStatus.act){
+        acceptedCookies = 5; //func + own add
+      }
+      if(this.selectedCookies.thirdPartyAdds === ActiveStatus.act){
+        acceptedCookies = 5; //func + 3rd party add
+      }
+    }
     const cookies: ICookieScore = {
       website: 'amazon.com',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 6,
+      acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ScoreCardService} from "../../../services/score-card/score-card.service";
-import {ModalController} from "@ionic/angular";
-import {Router} from "@angular/router";
-import {ICookieScore} from "../../../interfaces/interfaces";
+import {ScoreCardService} from '../../../services/score-card/score-card.service';
+import {ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
+import {ICookieScore} from '../../../interfaces/interfaces';
 
 @Component({
   selector: 'app-purpose-adjust',
@@ -128,22 +128,19 @@ export class PurposeAdjustComponent implements OnInit {
    * store settings and return to adjust-popup (means third part pop-up ought to close right along this one
    */
   acceptSettings(){
-    //TODO compute how many cookies and give this number!
-    const noOfCookies = 50;
+    const noOfCookies = 5;
     console.log('storing cookies by purpose');
     this.modalCtrl.dismiss(noOfCookies);
   }
 
   acceptAll(){
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'amazon.com',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 6,
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
-    //todo dismiss all modals
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/wikipedia');
   }

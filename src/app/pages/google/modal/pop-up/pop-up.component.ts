@@ -20,8 +20,8 @@ export class PopUpComponent implements OnInit {
   acceptAll(){
     const cookies: ICookieScore = {
       website: 'google.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 6,
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
     this.modalCtrl.dismiss();

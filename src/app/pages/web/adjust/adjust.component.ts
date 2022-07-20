@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ScoreCardService} from "../../../services/score-card/score-card.service";
-import {ModalController} from "@ionic/angular";
-import {Router} from "@angular/router";
-import {ICookieScore} from "../../../interfaces/interfaces";
-import {FurtherInfoComponent} from "../further-info/further-info.component";
+import {ScoreCardService} from '../../../services/score-card/score-card.service';
+import {ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
+import {ICookieScore} from '../../../interfaces/interfaces';
+import {FurtherInfoComponent} from '../further-info/further-info.component';
 
 @Component({
   selector: 'app-adjust',
@@ -195,11 +195,10 @@ export class AdjustComponent implements OnInit {  checkParent: boolean;
   }
 
   acceptAll() {
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'web.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 90,
+      acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
@@ -207,12 +206,24 @@ export class AdjustComponent implements OnInit {  checkParent: boolean;
     this.router.navigateByUrl('/ebay');
   }
 
-  acceptSelection(){
-    //todo determine how many cookies each checklist element contains and calculate number of cookies accordingly
+  acceptSelection(){let acceptedCookies = 12;
+    this.firstCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 2;
+      }});
+    this.secondCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 5;
+      }});
+    this.thirdCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 8;
+      }});
+    //forth checkboxes are functional cookies, always active and included in the 12 up top
     const cookies: ICookieScore = {
       website: 'web.de',
-      noOfCookies: 100,
-      acceptedCookies: 80
+      noOfCookies: 90,
+      acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

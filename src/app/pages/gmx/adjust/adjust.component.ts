@@ -196,11 +196,10 @@ export class AdjustComponent implements OnInit {
   }
 
   acceptAll() {
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'gmx.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 90,
+      acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
@@ -209,11 +208,24 @@ export class AdjustComponent implements OnInit {
   }
 
   acceptSelection(){
-    //todo determine how many cookies each checklist element contains and calculate number of cookies accordingly
+    let acceptedCookies = 12;
+    this.firstCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 2;
+      }});
+    this.secondCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 5;
+      }});
+    this.thirdCheckboxes.forEach(value =>{
+      if(value.isItemChecked){
+        acceptedCookies += 8;
+      }});
+    //forth checkboxes are functional cookies, always active and included in the 12 up top
     const cookies: ICookieScore = {
       website: 'gmx.de',
-      noOfCookies: 100,
-      acceptedCookies: 80
+      noOfCookies: 90,
+      acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

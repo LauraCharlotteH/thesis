@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActiveStatus, ICookieScore} from '../../../../interfaces/interfaces';
 import {ModalController} from '@ionic/angular';
 import {Router} from '@angular/router';
-import {ScoreCardService} from "../../../../services/score-card/score-card.service";
+import {ScoreCardService} from '../../../../services/score-card/score-card.service';
 
 @Component({
   selector: 'app-adjust',
@@ -24,11 +24,17 @@ export class AdjustComponent implements OnInit {
   }
 
   confirm(){
-    //TODO how many cookies?
+    let acceptedCookies =  7;
+    if(this.selectedCookies.pWSuche === ActiveStatus.act){
+      acceptedCookies ++;
+    }
+    if(this.selectedCookies.pWWeb === ActiveStatus.act){
+      acceptedCookies ++;
+    }
     const cookies: ICookieScore = {
       website: 'youtube.de',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 9,
+      acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');

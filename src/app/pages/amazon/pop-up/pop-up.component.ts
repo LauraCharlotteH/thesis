@@ -17,12 +17,11 @@ export class PopUpComponent implements OnInit {
   ngOnInit() {}
 
   accept(noOfCookies?: number){
-    const noOfC = (noOfCookies)? noOfCookies : 100;
-    //TODO how many cookies?
+    const noOfC = (noOfCookies)? noOfCookies : 6;
     const cookies: ICookieScore = {
       website: 'amazon.com',
       noOfCookies: noOfC,
-      acceptedCookies: 100
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
