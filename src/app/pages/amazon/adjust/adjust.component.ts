@@ -111,8 +111,4 @@ export class AdjustComponent implements OnInit {
     return await modal.present();
   }
 
-  print(){
-    console.log(this.selectedCookies);
-  }
-
 }

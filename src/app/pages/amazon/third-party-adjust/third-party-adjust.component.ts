@@ -1399,24 +1399,18 @@ export class ThirdPartyAdjustComponent implements OnInit {
   }
 
   acceptAll() {
-    //TODO how many cookies?
     const cookies: ICookieScore = {
       website: 'amazon.com',
-      noOfCookies: 100,
-      acceptedCookies: 100
+      noOfCookies: 6,
+      acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
-    //todo dismiss all modals
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/wikipedia');
   }
 
   acceptSettings() {
-    //TODO compute how many cookies and give this number!
-    const noOfCookies = 50;
-    console.log('storing third party cookies');
-    this.modalCtrl.dismiss(noOfCookies);
+    this.modalCtrl.dismiss(5);
   }
 
 
