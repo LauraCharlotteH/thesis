@@ -1406,7 +1406,7 @@ export class ThirdPartyAdjustComponent implements OnInit {
     };
     this.scoreCardService.setCookies(cookies);
     this.modalCtrl.dismiss();
-    this.router.navigateByUrl('/wikipedia');
+    this.router.navigateByUrl('/gmx');
   }
 
   acceptSettings() {

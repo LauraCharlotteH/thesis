@@ -36,7 +36,7 @@ export class AmazonPage implements OnInit {
          backdropDismiss: false,
          componentProps: {
            website: 'amazon.de',
-           nextURL: '/wikipedia',
+           nextURL: '/gmx',
            functional: 4,
            ads: 4,
            all: 6

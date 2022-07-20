@@ -142,7 +142,7 @@ export class PurposeAdjustComponent implements OnInit {
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
     this.modalCtrl.dismiss();
-    this.router.navigateByUrl('/wikipedia');
+    this.router.navigateByUrl('/gmx');
   }
 
   /**

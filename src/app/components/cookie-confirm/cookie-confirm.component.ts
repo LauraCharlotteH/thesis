@@ -12,6 +12,7 @@ export class CookieConfirmComponent implements OnInit {
   @Input() website;
   @Input() selection;
   @Input() amount;
+  @Input() maxCookies;
   @Input() nextURL;
 
   constructor(public modalCtrl: ModalController, public scoreCardService: ScoreCardService) { }
@@ -21,7 +22,7 @@ export class CookieConfirmComponent implements OnInit {
   confirm(){
     const cookies: ICookieScore = {
       website: this.website,
-      noOfCookies: 100,
+      noOfCookies: this.maxCookies,
       acceptedCookies: this.amount
     };
     this.scoreCardService.setCookies(cookies);

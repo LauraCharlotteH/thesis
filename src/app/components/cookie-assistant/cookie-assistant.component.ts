@@ -15,8 +15,8 @@ export class CookieAssistantComponent implements OnInit {
   @Input() website;
   @Input() nextURL;
   @Input() functional;
-  @Input()ads;
-  @Input()all;
+  @Input() ads;
+  @Input() all;
   header: string;
   cookieExplanation: string;
   thirdPartyExplanation: string;
@@ -100,6 +100,7 @@ export class CookieAssistantComponent implements OnInit {
         website: this.website,
         selection,
         amount: noCookies,
+        maxCookies: this.all,
         nextURL: this.nextURL
       },
       cssClass: 'cookie-confirm'

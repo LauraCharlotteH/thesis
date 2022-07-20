@@ -31,7 +31,7 @@ export class AdjustComponent implements OnInit {
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
     this.modalCtrl.dismiss();
-    this.router.navigateByUrl('/wikipedia');
+    this.router.navigateByUrl('/gmx');
   }
 
   async acceptSettings(){
@@ -54,7 +54,7 @@ export class AdjustComponent implements OnInit {
     this.scoreCardService.setCookies(cookies);
     console.log('confirming!');
     this.modalCtrl.dismiss();
-    this.router.navigateByUrl('/wikipedia');
+    this.router.navigateByUrl('/gmx');
   }
 
   addsChange(event) {
