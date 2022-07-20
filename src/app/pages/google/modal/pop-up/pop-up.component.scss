@@ -7,13 +7,32 @@
 .google-button {
   --border-radius: 40px;
   --box-shadow: none;
-  --padding-top: 20px;
-  --padding-bottom: 20px;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
   --padding-left: 30px;
-  --background: #1a73e8;
+  --background: #4285F4;
+  text-transform: none;
+}
+
+.reject{
+  position: relative;
+  left: 205px;
+  top: 700px;
+}
+
+.accept{
+  position: relative;
+  left: 305px;
+  top: 700px;
+}
+
+.option-button {
+  --box-shadow: none;
   text-transform: none;
   position: relative;
-  left: 522px;
-  top: 733px;
+  left: 30px;
+  top: 750px;
+  color: #4285F4;
+  --background: white;
 
 }

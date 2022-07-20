@@ -16,12 +16,22 @@ export class PopUpComponent implements OnInit {
 
   ngOnInit() {}
 
-  //TODO find out how many cookies and set accoridingly!
   acceptAll(){
+    this.accept(6);
+  }
+
+  /**
+   * functional cookies only
+   */
+  reject(){
+    this.accept(3);
+  }
+
+  accept(noOfAcceptedCookies){
     const cookies: ICookieScore = {
       website: 'google.de',
       noOfCookies: 6,
-      acceptedCookies: 6
+      acceptedCookies: noOfAcceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     this.modalCtrl.dismiss();
@@ -33,16 +43,7 @@ export class PopUpComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: AdjustSettingsComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'fullsize-adjust'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
     });
     return await modal.present();
   }
