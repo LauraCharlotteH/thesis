@@ -34,12 +34,12 @@ export class YoutubePage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: CookieAssistantComponent,
       backdropDismiss: false,
-      componentProps: { //TODO include correct number of cookies!
+      componentProps: {
         website: 'youtube.de',
         nextURL: '/facebook',
-        functional: 4,
-        ads: 5,
-        all: 10
+        functional: 7,
+        ads: 9,
+        all: 9
       },
       cssClass: 'cookie-assistant'
     });

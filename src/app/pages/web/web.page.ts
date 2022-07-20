@@ -34,12 +34,12 @@ export class WebPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: CookieAssistantComponent,
       backdropDismiss: false,
-      componentProps: { //TODO include correct number of cookies!
+      componentProps: {
         website: 'web.de',
         nextURL: '/ebay',
-        functional: 4,
-        ads: 5,
-        all: 10
+        functional: 12,
+        ads: 12,
+        all: 90
       },
       cssClass: 'cookie-assistant'
     });

@@ -34,12 +34,12 @@ export class GooglePage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: CookieAssistantComponent,
       backdropDismiss: false,
-      componentProps: { //TODO include correct number of cookies!
+      componentProps: {
         website: 'google.de',
         nextURL: '/youtube',
-        functional: 4,
-        ads: 5,
-        all: 10
+        functional: 3,
+        ads: 6,
+        all: 6
       },
       cssClass: 'cookie-assistant'
     });

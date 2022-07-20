@@ -34,12 +34,12 @@ export class AmazonPage implements OnInit {
        const modal = await this.modalCtrl.create({
          component: CookieAssistantComponent,
          backdropDismiss: false,
-         componentProps: { //TODO include correct number of cookies!
+         componentProps: {
            website: 'amazon.de',
            nextURL: '/wikipedia',
            functional: 4,
-           ads: 5,
-           all: 10
+           ads: 4,
+           all: 6
          },
          cssClass: 'cookie-assistant'
        });

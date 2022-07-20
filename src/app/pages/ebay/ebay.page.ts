@@ -34,12 +34,12 @@ export class EbayPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: CookieAssistantComponent,
       backdropDismiss: false,
-      componentProps: { //TODO include correct number of cookies!
+      componentProps: {
         website: 'ebay.de',
         nextURL: '/final',
-        functional: 4,
-        ads: 5,
-        all: 10
+        functional: 21,
+        ads: 22,
+        all: 40
       },
       cssClass: 'cookie-assistant'
     });
