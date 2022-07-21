@@ -17,15 +17,25 @@ export class PopUpComponent implements OnInit {
   ngOnInit() {}
 
   acceptAll(){
+    this.accept(9);
+  }
+
+  /**
+   * accept only functional cookies
+   */
+  reject(){
+    this.accept(7);
+  }
+
+  accept(noOAcceptedCookies){
     const cookies: ICookieScore = {
       website: 'youtube.de',
       noOfCookies: 9,
-      acceptedCookies: 9
+      acceptedCookies: noOAcceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/facebook');
-
   }
 
   async adjustSettings(){
