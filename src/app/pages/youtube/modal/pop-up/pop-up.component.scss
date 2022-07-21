@@ -12,16 +12,16 @@
   --box-shadow: none;
   --background: #065fd4;
   margin: 20px;
+  height: 45px;
+  bottom: 53px;
 }
 
 .accept{
-  bottom: 55px;
-  right: 10px;
+  right: 12px;
 }
 
 .adjust{
-  bottom: 55px;
-  right: 360px;
+  right: 362px;
   --background: white;
   color: #065fd4;
   --border-color: #065fd4 ;
@@ -29,6 +29,5 @@
 }
 
 .reject{
-  bottom: 55px;
   right: 200px;
 }
