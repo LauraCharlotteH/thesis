@@ -33,7 +33,11 @@
     <ion-row>
       <ion-col size="2">Alle</ion-col>
       <ion-col>{{allInfo}}
-        <app-titled-drop-down *ngIf="allExample" title="Beispiel:">{{allExample}}</app-titled-drop-down>
+        <app-titled-drop-down *ngIf="allStatistics" title="Beispiel:">
+          <p><strong>Präferenz Cookies: </strong>{{allPreference}}</p>
+          <p><strong>Statistik Cookies: </strong>{{allStatistics}}</p>
+          <p><strong>Social Media Cookies: </strong>{{allSocialMedia}}</p>
+        </app-titled-drop-down>
       </ion-col>
     </ion-row>
   </ion-grid>

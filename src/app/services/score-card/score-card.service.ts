@@ -7,8 +7,8 @@ import {Cluster, ICookieScore, IOplisResult, ParticipantGroup} from '../../inter
 export class ScoreCardService {
   private result: IOplisResult;
   private cookies: ICookieScore[] = new Array();
-  private cluster = Cluster.med; //Cluster; TODO remove hard coding
-  private group = ParticipantGroup.controlGroup; //ParticipantGroup; //TODO remove hard coding
+  private cluster: Cluster;
+  private group: ParticipantGroup;
 
   constructor() { }
 

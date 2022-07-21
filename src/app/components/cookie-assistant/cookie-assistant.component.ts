@@ -25,7 +25,9 @@ export class CookieAssistantComponent implements OnInit {
   addInfo: string;
   addExample: string;
   allInfo: string;
-  allExample: string;
+  allPreference: string;
+  allSocialMedia: string;
+  allStatistics: string;
 
   constructor(public scoreCardService: ScoreCardService, public modalCtrl: ModalController, public router: Router) {
   }
@@ -63,7 +65,9 @@ export class CookieAssistantComponent implements OnInit {
     this.addInfo = textJson.low.adds;
     this.addExample = textJson.low.addsExample;
     this.allInfo = textJson.low.all;
-    this.allExample = textJson.low.allExample;
+    this.allPreference = textJson.low.allPreference;
+    this.allSocialMedia = textJson.low.allSocialMedia;
+    this.allStatistics = textJson.low.allStatistics;
     this.cookieExplanation = textJson.low.cookie;
     this.thirdPartyExplanation= textJson.low.thirdParty;
   }
@@ -73,9 +77,10 @@ export class CookieAssistantComponent implements OnInit {
     this.functionalInfo = textJson.med.functional;
     this.funcExample = textJson.med.funcExample;
     this.addInfo = textJson.med.adds;
-    this.addExample = textJson.med.addsExample;
     this.allInfo = textJson.med.all;
-    this.allExample = textJson.med.allExample;
+    this.allPreference = textJson.med.allPreference;
+    this.allSocialMedia = textJson.med.allSocialMedia;
+    this.allStatistics = textJson.med.allStatistics;
     this.cookieExplanation = textJson.med.cookie;
     this.thirdPartyExplanation= textJson.med.thirdParty;
   }
@@ -83,11 +88,8 @@ export class CookieAssistantComponent implements OnInit {
   getHighTexts(){
     this.header = textJson.high.header;
     this.functionalInfo = textJson.high.functional;
-    //this.funcExample = textJson.high.funcExample;
     this.addInfo = textJson.high.adds;
-    //this.addExample = textJson.high.addsExample;
     this.allInfo = textJson.high.all;
-    //this.allExample = textJson.high.allExample;
     this.cookieExplanation = textJson.high.cookie;
     this.thirdPartyExplanation= textJson.high.thirdParty;
   }
