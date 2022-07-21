@@ -41,7 +41,6 @@ export class AdjustSettingsComponent implements OnInit {
       acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/youtube');
   }

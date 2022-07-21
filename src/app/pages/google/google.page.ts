@@ -43,12 +43,6 @@ export class GooglePage implements OnInit {
       },
       cssClass: 'cookie-assistant'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     return await modal.present();
   }
 
@@ -60,12 +54,6 @@ export class GooglePage implements OnInit {
         name: 'cluster is XXX'
       },
       cssClass: 'google-modal'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
     });
     return await modal.present();
   }

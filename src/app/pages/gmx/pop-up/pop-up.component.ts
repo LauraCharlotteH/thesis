@@ -26,7 +26,6 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/web');
   }
@@ -40,12 +39,6 @@ export class PopUpComponent implements OnInit {
       },
       cssClass: 'gmx-modal'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     await this.modalCtrl.dismiss();
     return await modal.present();
   }
@@ -58,10 +51,6 @@ export class PopUpComponent implements OnInit {
         name: 'cluster is XXX'
       },
       cssClass: 'gmx-modal'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      console.log('dismissed further info');
     });
     return await modal.present();
   }

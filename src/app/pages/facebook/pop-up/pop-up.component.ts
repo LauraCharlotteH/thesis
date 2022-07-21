@@ -23,7 +23,6 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/amazon');
   }
@@ -35,7 +34,6 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 8
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/amazon');
   }

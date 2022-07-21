@@ -216,133 +216,111 @@ export class OplisQuestionnaireService {
         oplisValue = 61;
         percentageRank = 2;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 1:
         oplisValue = 65;
         percentageRank = 3;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 2:
         oplisValue = 68;
         percentageRank = 4;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 3:
         oplisValue = 71;
         percentageRank = 4;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 4:
         oplisValue = 74;
         percentageRank = 9;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 5:
         oplisValue = 78;
         percentageRank = 11;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 6:
         oplisValue = 81;
         percentageRank = 15 ;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 7:
         oplisValue = 84;
         percentageRank = 18;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 8:
         oplisValue = 88;
         percentageRank = 22;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 9:
         oplisValue = 91;
         percentageRank = 27;
         cluster = Cluster.low;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 10:
         oplisValue = 94;
         percentageRank = 34;
         cluster = Cluster.med;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 11:
         oplisValue = 97;
         percentageRank = 42;
         cluster = Cluster.med;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 12:
         oplisValue = 101;
         percentageRank = 50;
         cluster = Cluster.med;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 13:
         oplisValue = 104;
         percentageRank = 58;
         cluster = Cluster.med;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 14:
         oplisValue = 107;
         percentageRank = 67;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 15:
         oplisValue = 110;
         percentageRank = 77;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 16:
         oplisValue = 114;
         percentageRank = 84;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 17:
         oplisValue = 117;
         percentageRank = 91;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 18:
         oplisValue = 120;
         percentageRank = 96;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 19:
         oplisValue = 123;
         percentageRank = 99;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       case 20:
         oplisValue = 127;
         percentageRank = 100;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
       default:
         oplisValue = 0;
         percentageRank = 0;
         cluster = Cluster.high;
-        console.log('eval: OV-' + oplisValue + ', PR-' +percentageRank + ' cluster:' + cluster);
         break;
     }
     let results: IOplisResult = {

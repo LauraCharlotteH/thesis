@@ -1426,7 +1426,6 @@ export class ThirdPartyAdjustComponent implements OnInit {
 
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
-        console.log('Dismissing purposeAdjust with data: ' + data.data);
         if(data.data === 'nothing stored'){
           //do nothing :)
         }else{

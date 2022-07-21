@@ -18,12 +18,6 @@ export class SpiegelPage implements OnInit {constructor(protected modalCtrl: Mod
       },
       cssClass: 'spiegel-modal'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     return await modal.present();
   }
 

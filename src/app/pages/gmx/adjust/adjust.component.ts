@@ -202,7 +202,6 @@ export class AdjustComponent implements OnInit {
       acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/web');
   }
@@ -228,7 +227,6 @@ export class AdjustComponent implements OnInit {
       acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/web');
   }
@@ -241,10 +239,6 @@ export class AdjustComponent implements OnInit {
         name: 'cluster is XXX'
       },
       cssClass: 'gmx-modal'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      console.log('dismissed further info');
     });
     return await modal.present();
   }

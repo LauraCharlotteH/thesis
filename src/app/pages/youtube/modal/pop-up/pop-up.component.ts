@@ -45,12 +45,6 @@ export class PopUpComponent implements OnInit {
       backdropDismiss: false,
       cssClass: 'fullsize-adjust'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     return await modal.present();
   }
 

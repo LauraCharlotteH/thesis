@@ -29,7 +29,6 @@ export class AdjustComponent implements OnInit {
       acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/gmx');
   }
@@ -52,7 +51,6 @@ export class AdjustComponent implements OnInit {
       acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/gmx');
   }
@@ -101,7 +99,6 @@ export class AdjustComponent implements OnInit {
 
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
-        console.log('data is: ' + data.data);
         this.noOfThirdPartyCookies = data;
       } else {
         //no data means "accept all" was selected in other popup, so dismiss all

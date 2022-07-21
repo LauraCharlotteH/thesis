@@ -48,16 +48,6 @@ export class ScoreCardService {
     });
     //add to list if it does not exist yet
     if(!alreadyExists){this.cookies.push(cookies);}
-    //TODO remove:
-    console.log(this.cookies);
-  }
-
-  getCookies(page: string){
-    this.cookies.forEach( (cookieScore) => {
-      if (cookieScore.website === page){
-        return cookieScore;
-      }
-    });
   }
 
   /**

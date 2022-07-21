@@ -110,7 +110,6 @@ export class CookieAssistantComponent implements OnInit {
 
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
-        console.log('data is: ' + data.data);
         await this.modalCtrl.dismiss();
         await this.router.navigateByUrl(this.nextURL);
       }

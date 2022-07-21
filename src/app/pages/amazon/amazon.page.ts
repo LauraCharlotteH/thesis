@@ -43,12 +43,6 @@ export class AmazonPage implements OnInit {
          },
          cssClass: 'cookie-assistant'
        });
-
-       modal.onDidDismiss().then(async (data: any) => {
-         if (data.data) {
-           console.log('data is: ' + data.data);
-         }
-       });
        return await modal.present();
      }
 
@@ -61,12 +55,6 @@ export class AmazonPage implements OnInit {
          name: 'cluster is XXX'
        },
        cssClass: 'amazon-modal'
-     });
-
-     modal.onDidDismiss().then(async (data: any) => {
-       if (data.data) {
-         console.log('data is: ' + data.data);
-       }
      });
      return await modal.present();
 

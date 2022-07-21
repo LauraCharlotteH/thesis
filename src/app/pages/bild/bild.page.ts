@@ -20,12 +20,6 @@ export class BildPage implements OnInit {
       },
       cssClass: 'bild-modal'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     return await modal.present();
   }
 

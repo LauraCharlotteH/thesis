@@ -201,7 +201,6 @@ export class AdjustComponent implements OnInit {  checkParent: boolean;
       acceptedCookies: 90
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/ebay');
   }
@@ -226,7 +225,6 @@ export class AdjustComponent implements OnInit {  checkParent: boolean;
       acceptedCookies
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/ebay');
   }

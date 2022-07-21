@@ -129,7 +129,6 @@ export class PurposeAdjustComponent implements OnInit {
    */
   acceptSettings(){
     const noOfCookies = 5;
-    console.log('storing cookies by purpose');
     this.modalCtrl.dismiss(noOfCookies);
   }
 
@@ -140,7 +139,6 @@ export class PurposeAdjustComponent implements OnInit {
       acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/gmx');
   }

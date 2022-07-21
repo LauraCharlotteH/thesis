@@ -43,12 +43,6 @@ export class EbayPage implements OnInit {
       },
       cssClass: 'cookie-assistant'
     });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
-    });
     return await modal.present();
   }
 
@@ -63,12 +57,6 @@ export class EbayPage implements OnInit {
         name: 'cluster is XXX'
       },
       cssClass: 'ebay-modal'
-    });
-
-    modal.onDidDismiss().then(async (data: any) => {
-      if (data.data) {
-        console.log('data is: ' + data.data);
-      }
     });
     return await modal.present();
 

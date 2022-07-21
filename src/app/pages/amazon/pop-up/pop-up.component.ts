@@ -24,7 +24,6 @@ export class PopUpComponent implements OnInit {
       acceptedCookies: 6
     };
     this.scoreCardService.setCookies(cookies);
-    console.log('confirming!');
     this.modalCtrl.dismiss();
     this.router.navigateByUrl('/gmx');
   }
@@ -42,7 +41,6 @@ export class PopUpComponent implements OnInit {
 
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
-        console.log('data is: ' + data.data);
         this.accept(data.data);
       }
     });

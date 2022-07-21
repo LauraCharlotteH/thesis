@@ -28,7 +28,6 @@ export class OPLISPage implements OnInit {
   }
 
   onAnswer(option: boolean){
-    console.log('for Question: ' + this.currentQuestion + ' the answer is: ' + option);
     this.answerSelected = true;
     setTimeout(() => {
       //get new question at random, ensure it has not been answered before
