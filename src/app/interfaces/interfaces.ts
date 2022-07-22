@@ -25,9 +25,9 @@ export interface ICookieScore{
 }
 
 export enum Cluster {
-  low = 'LOW',
-  med = 'MED',
-  high = 'HIGH'
+  low = 'Cluster_1',
+  med = 'Cluster_2',
+  high = 'Cluster_3'
 }
 
 export enum ParticipantGroup {
