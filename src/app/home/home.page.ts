@@ -8,6 +8,7 @@ import {ScoreCardService} from '../services/score-card/score-card.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  selection = false;
 
   constructor(public scoreCardService: ScoreCardService) {}
 
@@ -23,6 +24,8 @@ export class HomePage {
         this.scoreCardService.setGroup(ParticipantGroup.controlGroup);
         break;
     }
+    //enable "next" button
+    this.selection = true;
   }
 
 }
