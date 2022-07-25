@@ -9,7 +9,7 @@ import {ScoreCardService} from '../../services/score-card/score-card.service';
 })
 export class FinalPage implements OnInit {
   group: ParticipantGroup;
-  rawOplisScore: number;
+  oplisScore: string;
   cluster: Cluster;
   acceptedCookies: number;
 
@@ -18,8 +18,75 @@ export class FinalPage implements OnInit {
   ngOnInit() {
     this.group = this.scoreCardService.getGroup()? this.scoreCardService.getGroup(): null;
     this.cluster = this.scoreCardService.getCluster()? this.scoreCardService.getCluster(): null;
-    this.rawOplisScore = this.scoreCardService.getResult()? this.scoreCardService.getResult().raw : -1;
     this.acceptedCookies = this.scoreCardService.getNumberOfAcceptedCookies()? this.scoreCardService.getNumberOfAcceptedCookies(): -1;
+
+    let rawOplisScore = this.scoreCardService.getResult()? this.scoreCardService.getResult().raw : -1;
+    switch (rawOplisScore) {
+      case 0:
+        this.oplisScore = 'a';
+        break;
+      case 1:
+        this.oplisScore = 'b';
+        break;
+      case 2:
+        this.oplisScore = 'c';
+        break;
+      case 3:
+        this.oplisScore = 'd';
+        break;
+      case 4:
+        this.oplisScore = 'e';
+        break;
+      case 5:
+        this.oplisScore = 'f';
+        break;
+      case 6:
+        this.oplisScore = 'g';
+        break;
+      case 7:
+        this.oplisScore = 'h';
+        break;
+      case 8:
+        this.oplisScore = 'i';
+        break;
+      case 9:
+        this.oplisScore = 'j';
+        break;
+      case 10:
+        this.oplisScore = 'k';
+        break;
+      case 11:
+        this.oplisScore = 'l';
+        break;
+      case 12:
+        this.oplisScore = 'm';
+        break;
+      case 13:
+        this.oplisScore = 'n';
+        break;
+      case 14:
+        this.oplisScore = 'o';
+        break;
+      case 15:
+        this.oplisScore = 'p';
+        break;
+      case 16:
+        this.oplisScore = 'q';
+        break;
+      case 17:
+        this.oplisScore = 'r';
+        break;
+      case 18:
+        this.oplisScore = 's';
+        break;
+      case 19:
+        this.oplisScore = 't';
+        break;
+      case 20:
+        this.oplisScore = 'u';
+        break;
+
+    }
   }
 
 }
