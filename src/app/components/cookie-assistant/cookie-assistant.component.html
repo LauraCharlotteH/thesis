@@ -1,16 +1,18 @@
-<ion-header></ion-header>
+<ion-header>
+  <h3 id="header">für Website: {{website}}</h3>
+</ion-header>
 <ion-content>
   <p>{{header}}</p>
   <ion-grid>
     <ion-row>
       <ion-col>
         <app-titled-drop-down title="Was ist ein Cookie?">
-          {{cookieExplanation}}
+          <p>{{cookieExplanation}}</p>
         </app-titled-drop-down>
       </ion-col>
       <ion-col>
         <app-titled-drop-down title="Was sind third-party Cookies?">
-          {{thirdPartyExplanation}}
+          <p>{{thirdPartyExplanation}}</p>
         </app-titled-drop-down>
       </ion-col>
     </ion-row>
@@ -18,21 +20,29 @@
 
   <ion-grid class="infoGrid">
     <ion-row>
-      <ion-col size="2">Funktionale</ion-col>
+      <ion-col size="2">
+        <p><strong>Funktionale<br>Cookies</strong></p>
+      </ion-col>
       <ion-col>
-        {{functionalInfo}}
-        <app-titled-drop-down *ngIf="funcExample" title="Beispiel:">{{funcExample}}</app-titled-drop-down>
+        <p>{{functionalInfo}}</p>
+        <app-titled-drop-down *ngIf="funcExample" title="Beispiel:"><p>{{funcExample}}</p></app-titled-drop-down>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="2">Marketing</ion-col>
-      <ion-col>{{addInfo}}
-        <app-titled-drop-down *ngIf="addExample" title="Beispiel:">{{addExample}}</app-titled-drop-down>
+      <ion-col size="2">
+        <p><strong>Marketing<br>Cookies</strong></p>
+      </ion-col>
+      <ion-col>
+        <p>{{addInfo}}</p>
+        <app-titled-drop-down *ngIf="addExample" title="Beispiel:"><p>{{addExample}}</p></app-titled-drop-down>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="2">Alle</ion-col>
-      <ion-col>{{allInfo}}
+      <ion-col size="2">
+        <p><strong>Alle<br>Cookies</strong></p>
+      </ion-col>
+      <ion-col>
+        <p>{{allInfo}}</p>
         <app-titled-drop-down *ngIf="allStatistics" title="Beispiel:">
           <p><strong>Präferenz Cookies: </strong>{{allPreference}}</p>
           <p><strong>Statistik Cookies: </strong>{{allStatistics}}</p>
@@ -41,12 +51,18 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-toolbar>
-    <ion-button (click)="openConfirmPopup('functionale', functional)">Funktionale<br>Cookies</ion-button>
-    <ion-button (click)="openConfirmPopup('marketing', ads)">Marketing<br>Cookies</ion-button>
-    <ion-button (click)="openConfirmPopup('alle', all)">Alle<br>Cookies</ion-button>
-  </ion-toolbar>
-
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="openConfirmPopup('functionale', functional)">Funktionale<br>Cookies</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="openConfirmPopup('marketing', ads)">Marketing<br>Cookies</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="openConfirmPopup('alle', all)">Alle<br>Cookies</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
