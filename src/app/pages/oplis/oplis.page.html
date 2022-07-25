@@ -23,18 +23,14 @@
     <!--When all questions are answered-->
     <div *ngIf="prevAnswered.length > 20">
       <div class="results-wrapper">
-        <p>Richtige Antworten: {{ correctAnswers }} | Falsche Antworten: {{ incorrectAnswers }}</p>
-        <p>OPLIS Wert: {{result.oplisScore}}</p>
-        <p>Prozentrang: {{result.percentageRank}}</p>
-        <h4>Cluster: {{result.cluster}}</h4>
-        <p>Sie müssen sich diese Informationen nicht merken.</p>
+        <h4>Ihr Cluster ist: {{result.cluster}}</h4>
       </div>
       <div>
         <p>Als nächstes werden Ihnen die Cookie Popups verschiedener Webseiten angezeigt. Stellen Sie sich vor, Sie
           würden die Webseite besuchen wollen und das Popup kommt. Wählen Sie die Cookies so wie Sie es auch in der
           Realität tun würden. Wenn Sie Ihre Auswahl getroffen haben werden Sie automatisch zum nächten Testpopup
           weitergeleitet.</p>
-        <p>Info: So lange Sie das petrolfarbene Banner mit dem durchgestrichenen Keks sehen befinden Sie sich auf der
+        <p>Info: So lange Sie das petrolfarbene Banner mit dem Keks sehen befinden Sie sich auf der
           Webseite des Prototypen und es werden keine echten Cookies gesetzt.</p>
       </div>
       <ion-button [routerLink]="['/google']">Weiter!</ion-button>
