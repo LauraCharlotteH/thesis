@@ -11,6 +11,7 @@ import {ScoreCardService} from '../../services/score-card/score-card.service';
 
 export class OPLISPage implements OnInit {
   currentQuestion: number;
+  currentAnswerResult: boolean;
   answerSelected = false;
   correctAnswers = 0;
   incorrectAnswers = 0;
@@ -27,8 +28,14 @@ export class OPLISPage implements OnInit {
     this.prevAnswered.push(this.currentQuestion);
   }
 
-  onAnswer(option: boolean){
+  onSelect(result: boolean){
+    this.currentAnswerResult = result;
+    //enable submit button
     this.answerSelected = true;
+  }
+
+  submitAnswer(){
+    //this.answerSelected = true;
     setTimeout(() => {
       //get new question at random, ensure it has not been answered before
       let newQuiz = this.getRandom();
@@ -37,14 +44,14 @@ export class OPLISPage implements OnInit {
       }
       this.currentQuestion = newQuiz;
       this.prevAnswered.push(this.currentQuestion);
-      //check results
+      //recalculate full OPLIS Result
       this.result = this.questionnaireService.evaluate(this.correctAnswers);
       this.scoreCardService.setResult(this.result);
 
       this.answerSelected = false;
     }, 300);
-
-    if(option){
+    //store the result of the answered question
+    if(this.currentAnswerResult){
       this.correctAnswers++;
     }else{
       this.incorrectAnswers++;
