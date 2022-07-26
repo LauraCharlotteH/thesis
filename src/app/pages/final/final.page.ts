@@ -20,7 +20,7 @@ export class FinalPage implements OnInit {
     this.cluster = this.scoreCardService.getCluster()? this.scoreCardService.getCluster(): null;
     this.acceptedCookies = this.scoreCardService.getNumberOfAcceptedCookies()? this.scoreCardService.getNumberOfAcceptedCookies(): -1;
 
-    let rawOplisScore = this.scoreCardService.getResult()? this.scoreCardService.getResult().raw : -1;
+    const rawOplisScore = this.scoreCardService.getResult()? this.scoreCardService.getResult().raw : -1;
     switch (rawOplisScore) {
       case 0:
         this.oplisScore = 'a';
