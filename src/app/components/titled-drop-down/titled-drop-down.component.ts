@@ -5,6 +5,10 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} f
   templateUrl: './titled-drop-down.component.html',
   styleUrls: ['./titled-drop-down.component.scss'],
 })
+
+/**
+ * same as drop-down but this component allows to have a header, it also comes with many style variables -> see CSS
+ */
 export class TitledDropDownComponent implements OnInit {
   /**
    * The body of the drop down element (part that is toggled)

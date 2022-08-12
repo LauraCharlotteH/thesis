@@ -4,13 +4,25 @@ import {Cluster, ICookieScore, IOplisResult, ParticipantGroup} from '../../inter
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * temporary database, automatically wipes for each new session!
+ *
+ * Service uses no hard copies so that all pages work on the same storage variables and thus access the same data
+ */
 export class ScoreCardService {
+  /**
+   * storage variables for all relevant information necessary in the CA Software,
+   * all storage syntax is detailed in interfaces/interfaces.ts
+   */
   private result: IOplisResult;
   private cookies: ICookieScore[] = new Array();
   private cluster: Cluster;
   private group: ParticipantGroup;
 
   constructor() { }
+
+  //getter and setter for the storage variables
 
   setResult(res: IOplisResult){
     this.result=res;

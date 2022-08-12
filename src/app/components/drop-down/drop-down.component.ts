@@ -5,6 +5,10 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} f
   templateUrl: './drop-down.component.html',
   styleUrls: ['./drop-down.component.scss'],
 })
+
+/**
+ * Simple drop down with no header -> basically just an arrow to toggle a drop-down field containing whatever
+ */
 export class DropDownComponent implements OnInit {
   /**
    * The body of the drop down element (part that is toggled)

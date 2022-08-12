@@ -7,11 +7,19 @@ import {ScoreCardService} from '../services/score-card/score-card.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+/**
+ * First page the user gets to see, allows selection of participant group (stores it in score-card). Only when this is
+ * put in does the page allow the user to continue
+ */
 export class HomePage {
   selection = false;
 
   constructor(public scoreCardService: ScoreCardService) {}
 
+  /**
+   * @param e participant group selected in drop down
+   */
   selectionChange(e){
     switch (e.detail.value) {
       case 'ppa':

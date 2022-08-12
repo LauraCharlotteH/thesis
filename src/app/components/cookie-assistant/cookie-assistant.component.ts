@@ -11,12 +11,18 @@ import {Router} from '@angular/router';
   templateUrl: './cookie-assistant.component.html',
   styleUrls: ['./cookie-assistant.component.scss'],
 })
+
+/**
+ * Main Cookie assistant. This component displays the cookie popup, determines the correct text for the cluster,
+ * opens the confirm dialogue and stores the number of selected cookies in the score-card
+ */
 export class CookieAssistantComponent implements OnInit {
   @Input() website;
   @Input() nextURL;
   @Input() functional;
   @Input() ads;
   @Input() all;
+  // variables storing the texts after init to access them from HTML doc
   header: string;
   cookieExplanation: string;
   thirdPartyExplanation: string;
@@ -94,6 +100,12 @@ export class CookieAssistantComponent implements OnInit {
     this.thirdPartyExplanation= textJson.high.thirdParty;
   }
 
+  /**
+   * When user clicks one of the three buttons this opens the confirm popup
+   *
+   * @param selection - functional, marketing or all
+   * @param noCookies - amount of cookies (information received from page opening the CA pop-up
+   */
   async openConfirmPopup(selection: string, noCookies: number){
     const modal = await this.modalCtrl.create({
       component: CookieConfirmComponent,
@@ -108,6 +120,7 @@ export class CookieAssistantComponent implements OnInit {
       cssClass: 'cookie-confirm'
     });
 
+    // no data = no action as that is the "return" option in the confirming dialogue
     modal.onDidDismiss().then(async (data: any) => {
       if (data.data) {
         await this.modalCtrl.dismiss();

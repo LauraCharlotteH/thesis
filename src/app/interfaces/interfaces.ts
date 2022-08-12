@@ -18,24 +18,36 @@ export interface IOplisResult{
   cluster: Cluster;
 }
 
+/**
+ * format to store number of cookies allowed in a website
+ */
 export interface ICookieScore{
   website: string;
-  noOfCookies: number;
+  noOfCookies: number; //maximum number of cookies possible on this web site
   acceptedCookies: number;
 }
 
+/**
+ * for coding of information
+ */
 export enum Cluster {
   low = 'Cluster_1',
   med = 'Cluster_2',
   high = 'Cluster_3'
 }
 
+/**
+ * for coding of information
+ */
 export enum ParticipantGroup {
   personalisedpa = 'A',
   pa = 'B',
   controlGroup = 'C'
 }
 
+/**
+ * necessary to toggle images on youtube and google depending on the selection
+ */
 export enum ActiveStatus {
   act = 'ACTIVE',
   notact= 'NOTACTIVE',

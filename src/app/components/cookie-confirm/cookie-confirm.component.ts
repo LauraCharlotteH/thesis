@@ -8,6 +8,10 @@ import {ScoreCardService} from '../../services/score-card/score-card.service';
   templateUrl: './cookie-confirm.component.html',
   styleUrls: ['./cookie-confirm.component.scss'],
 })
+
+/**
+ * The contents of the confirm dialogue opened when user makes a selection in CA
+ */
 export class CookieConfirmComponent implements OnInit {
   @Input() website;
   @Input() selection;
@@ -19,6 +23,9 @@ export class CookieConfirmComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * user confirmed choice -> save choice to scorecard and GOTO next page
+   */
   confirm(){
     const cookies: ICookieScore = {
       website: this.website,
@@ -29,6 +36,9 @@ export class CookieConfirmComponent implements OnInit {
     this.modalCtrl.dismiss('confirm at: ' + this.website );
   }
 
+  /**
+   * close confirm popup -> CA is still open so we return to that
+   */
   return(){
     this.modalCtrl.dismiss();
   }

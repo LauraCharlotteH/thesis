@@ -5,6 +5,11 @@ import {IQuestionnaire, IOplisResult, Cluster} from '../../interfaces/interfaces
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * This service stores the OPLIS questionnaire in questions[], makes it accessible for pages and
+ * provides functionality to evaluate the oplis score to assign the users their cluster
+ */
 export class OplisQuestionnaireService {
   //input your questions like this:
   questions: IQuestionnaire[] = [
@@ -207,6 +212,10 @@ export class OplisQuestionnaireService {
     return this.questions;
   }
 
+  /**
+   * automatic evaluation of OPLIS Score & assigining of cluster
+   * @param correctAnswers the number of questions the user answered correctly
+   */
   evaluate(correctAnswers: number){
     let oplisValue = 0;
     let percentageRank = 0;
