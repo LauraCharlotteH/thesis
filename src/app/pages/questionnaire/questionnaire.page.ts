@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IQuestionnaire, IOplisResult, Cluster} from '../../interfaces/interfaces';
-import {OplisQuestionnaireService} from '../../services/oplis-questionnaire.service';
+import {OplisQuestionnaireService} from '../../services/OPLIS/oplis-questionnaire.service';
 import {ScoreCardService} from '../../services/score-card/score-card.service';
 
 @Component({

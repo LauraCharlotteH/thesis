@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IQuestionnaire, IOplisResult, Cluster} from '../interfaces/interfaces';
+import {IQuestionnaire, IOplisResult, Cluster} from '../../interfaces/interfaces';
 
 
 @Injectable({
