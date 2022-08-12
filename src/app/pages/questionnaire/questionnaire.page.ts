@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IQuestionnaire, IOplisResult, Cluster} from '../../interfaces/interfaces';
+import {IQuestionnaire, IOplisResult} from '../../interfaces/interfaces';
 import {OplisQuestionnaireService} from '../../services/OPLIS/oplis-questionnaire.service';
 import {ScoreCardService} from '../../services/score-card/score-card.service';
 
@@ -9,6 +9,13 @@ import {ScoreCardService} from '../../services/score-card/score-card.service';
   styleUrls: ['./questionnaire.page.scss'],
 })
 
+/**
+ * Page displaying the questions provided by the used questionnaire service.
+ * Questions are selected at random, the page only stores if the answer was correct or not
+ * number of correct answers is provided to service at the end to compute the users cluster.
+ *
+ * When all questions are answered this page displays the cluster result and explains the next task
+ */
 export class QuestionnairePage implements OnInit {
   currentQuestion: number;
   currentAnswerResult: boolean;
@@ -34,12 +41,15 @@ export class QuestionnairePage implements OnInit {
     this.answerSelected = true;
   }
 
+  /**
+   * on click of "sumbit" button, get a new question and mark it as visited.
+   * also update the number of correct answers based on the result of the submitted answer
+   */
   submitAnswer(){
-    //this.answerSelected = true;
     setTimeout(() => {
       //get new question at random, ensure it has not been answered before
       let newQuiz = this.getRandom();
-      while(this.prevAnswered.includes(newQuiz) && this.prevAnswered.length < 20){
+      while(this.prevAnswered.includes(newQuiz) && this.prevAnswered.length < this.questions.length){
         newQuiz = this.getRandom();
       }
       this.currentQuestion = newQuiz;
@@ -63,11 +73,5 @@ export class QuestionnairePage implements OnInit {
     return Math.floor(Math.random() * this.questions.length);
   }
 
-  playAgain(){
-    this.prevAnswered = [];
-    this.prevAnswered.push(this.getRandom());
-    this.correctAnswers = 0;
-    this.incorrectAnswers = 0;
-  }
 
 }

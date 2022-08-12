@@ -50,9 +50,6 @@ export class GooglePage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: PopUpComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'google-modal'
     });
     return await modal.present();

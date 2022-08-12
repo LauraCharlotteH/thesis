@@ -53,9 +53,6 @@ export class EbayPage implements OnInit {
       breakpoints: [1],
       initialBreakpoint: 1,
       handle: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'ebay-modal'
     });
     return await modal.present();

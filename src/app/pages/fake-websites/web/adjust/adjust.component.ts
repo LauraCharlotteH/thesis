@@ -233,9 +233,6 @@ export class AdjustComponent implements OnInit {  checkParent: boolean;
     const modal = await this.modalCtrl.create({
       component: FurtherInfoComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'gmx-modal'
     });
 

@@ -13,9 +13,6 @@ export class SpiegelPage implements OnInit {constructor(protected modalCtrl: Mod
     const modal = await this.modalCtrl.create({
       component: PopUpComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'spiegel-modal'
     });
     return await modal.present();

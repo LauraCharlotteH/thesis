@@ -34,9 +34,6 @@ export class PopUpComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: AdjustComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'gmx-modal'
     });
     await this.modalCtrl.dismiss();
@@ -47,9 +44,6 @@ export class PopUpComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: FurtherInfoComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'gmx-modal'
     });
     return await modal.present();

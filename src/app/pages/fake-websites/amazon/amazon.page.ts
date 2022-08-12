@@ -51,9 +51,6 @@ export class AmazonPage implements OnInit {
        component: PopUpComponent,
        backdropDismiss: false,
        initialBreakpoint: 0.4,
-       componentProps: {
-         name: 'cluster is XXX'
-       },
        cssClass: 'amazon-modal'
      });
      return await modal.present();

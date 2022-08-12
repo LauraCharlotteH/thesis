@@ -50,9 +50,6 @@ export class WebPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: PopUpComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'gmx-modal'
     });
     return await modal.present();

@@ -33,9 +33,6 @@ export class PopUpComponent implements OnInit {
     const modal = await this.modalCtrl.create({
       component: AdjustComponent,
       backdropDismiss: false,
-      componentProps: {
-        name: 'cluster is XXX'
-      },
       cssClass: 'fullsize-adjust'
     });
 

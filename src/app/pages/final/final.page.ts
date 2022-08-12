@@ -7,6 +7,10 @@ import {ScoreCardService} from '../../services/score-card/score-card.service';
   templateUrl: './final.page.html',
   styleUrls: ['./final.page.scss'],
 })
+
+/**
+ * Page displayes results stored in score-card in a coded form
+ */
 export class FinalPage implements OnInit {
   group: ParticipantGroup;
   oplisScore: string;
@@ -15,11 +19,15 @@ export class FinalPage implements OnInit {
 
   constructor(public scoreCardService: ScoreCardService) { }
 
+  /**
+   * get results from score card and make available to html
+   */
   ngOnInit() {
     this.group = this.scoreCardService.getGroup()? this.scoreCardService.getGroup(): null;
     this.cluster = this.scoreCardService.getCluster()? this.scoreCardService.getCluster(): null;
     this.acceptedCookies = this.scoreCardService.getNumberOfAcceptedCookies()? this.scoreCardService.getNumberOfAcceptedCookies(): -1;
 
+    //code oplis score to not incent users to change it
     const rawOplisScore = this.scoreCardService.getResult()? this.scoreCardService.getResult().raw : -1;
     switch (rawOplisScore) {
       case 0:

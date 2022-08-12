@@ -1418,9 +1418,6 @@ export class ThirdPartyAdjustComponent implements OnInit {
     const modal = await this.modalCtrl.create({
     component: PurposeAdjustComponent,
     backdropDismiss: false,
-    componentProps: {
-      name: 'cluster is XXX'
-    },
     cssClass: 'fullsize-adjust'
   });
 
