@@ -1,0 +1,13 @@
+ion-content {
+  --background: url("../../../../assets/page-backgrounds/wikipedia-background.png") no-repeat center;
+  --background-size: cover;
+}
+ion-button {
+  position: absolute;
+  right: 10px;
+  width: 250px;
+}
+.button-inner {
+  flex-flow: column;
+}
+
